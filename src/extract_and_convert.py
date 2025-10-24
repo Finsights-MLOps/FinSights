@@ -82,7 +82,8 @@ def convert_json_to_parquet(json_path: str, csv_output_folder: str, parquet_outp
     
     Args:
         json_path: Path to the JSON file
-        output_folder: Folder to save CSV and Parquet files
+        csv_output_folder: Folder to save CSV files
+        parquet_output_folder: Folder to save Parquet files
         min_year: Minimum year to include (None or "current" for current year)
         max_year: Maximum year to include (None or "current" for current year)
         
@@ -109,22 +110,10 @@ def convert_json_to_parquet(json_path: str, csv_output_folder: str, parquet_outp
 
     report_year = parse_year(period_of_report) or parse_year(filing_date)
     
-    # Handle dynamic year settings
     current_year = datetime.now().year
+    actual_min_year = current_year if min_year in [None, "current", "auto", 0] else min_year
+    actual_max_year = current_year if max_year in [None, "current", "auto", 0] else max_year
     
-    # If min_year is None, "current", or "auto", use current year
-    if min_year in [None, "current", "auto", 0]:
-        actual_min_year = current_year
-    else:
-        actual_min_year = min_year
-    
-    # If max_year is None, "current", or "auto", use current year
-    if max_year in [None, "current", "auto", 0]:
-        actual_max_year = current_year
-    else:
-        actual_max_year = max_year
-    
-    # Validate report year
     if not report_year or not (actual_min_year <= report_year <= actual_max_year):
         LOGGER.debug(f"Skipping {p.name} - year {report_year} outside range [{actual_min_year}-{actual_max_year}]")
         return False
@@ -146,12 +135,34 @@ def convert_json_to_parquet(json_path: str, csv_output_folder: str, parquet_outp
         "item_11": 15, "item_12": 16, "item_13": 17, "item_14": 18, "item_15": 19
     }
 
+    section_title_map = {
+        "item_1": "Business",
+        "item_1a": "Risk Factors",
+        "item_1b": "Unresolved Staff Comments",
+        "item_2": "Properties",
+        "item_3": "Legal Proceedings",
+        "item_4": "Mine Safety Disclosures",
+        "item_5": "Market for Stock",
+        "item_6": "Selected Financial Data",
+        "item_7": "Management’s Discussion and Analysis (MD&A)",
+        "item_7a": "Quantitative and Qualitative Disclosures About Market Risk",
+        "item_8": "Financial Statements and Supplementary Data",
+        "item_9": "Changes in and Disagreements With Accountants on Accounting and Financial Disclosure",
+        "item_9a": "Controls and Procedures",
+        "item_9b": "Other Information",
+        "item_10": "Directors, Officers & Governance",
+        "item_11": "Executive Compensation",
+        "item_12": "Security Ownership of Certain Beneficial Owners and Management",
+        "item_13": "Certain Relationships and Related Transactions",
+        "item_14": "Principal Accounting Fees and Services",
+        "item_15": "Exhibits List"
+    }
+
     for sec_idx, sec_key in enumerate(sorted(item_keys, key=str.lower)):
         raw_text = str(data.get(sec_key, "")).strip()
         if not raw_text:
             continue
         
-        # --- COALESCE HEADINGS WITH FIRST PROSE LINE ---
         lines = [ln.strip() for ln in raw_text.splitlines() if ln.strip()]
         paras, header_buf = [], []
         for ln in lines:
@@ -165,7 +176,6 @@ def convert_json_to_parquet(json_path: str, csv_output_folder: str, parquet_outp
                 header_buf = []
             else:
                 paras.append(ln)
-
         if header_buf:
             combined = " ".join(header_buf)
             combined = _normalize_item_token(combined)
@@ -193,11 +203,14 @@ def convert_json_to_parquet(json_path: str, csv_output_folder: str, parquet_outp
                 "report_year": report_year,
                 "docID": docID,
                 "sentenceID": sentenceID,
-                "section_name": sec_key,
+                "section_name": sec_key,          # will update later using map
+                "section_item": sec_key,          # new column
                 "section_ID": section_id,
                 "form": filing_type,                
                 "sentence_index": s_idx,
-                "sentence": sent           
+                "sentence": sent,
+                "SIC": data.get("sic") or None,   # new column
+                "reportDate": filing_date if filing_date else f"{current_year}-12-23"  # new column
             }
             records.append(rec)
 
@@ -206,18 +219,22 @@ def convert_json_to_parquet(json_path: str, csv_output_folder: str, parquet_outp
         return False
 
     df = pd.DataFrame(records)
-    
+
+    # --- Remove record_status if exists ---
+    if "record_status" in df.columns:
+        df = df.drop(columns=["record_status"])
+
+    # --- Update section_name using section_title_map ---
+    df["section_name"] = df["section_item"].map(lambda x: section_title_map.get(x.lower(), x))
+
     # --- Add Audit Columns ---
-    df["temporal_bin"] = df["report_year"].apply(
-        lambda y: temporal_bin(y) if pd.notnull(y) else "bin_unknown"
-    )
+    df["temporal_bin"] = df["report_year"].apply(lambda y: temporal_bin(y) if pd.notnull(y) else "bin_unknown")
     now = datetime.now()
     df["sample_created_at"] = now
     df["last_modified_date"] = now
     df["sample_version"] = "v2.1_combined_extraction"
     df["source_file_path"] = str(json_path)
     df["load_method"] = "extract_and_convert"
-    df["record_status"] = "complete"
 
     # ---- Write CSV + Parquet ----
     os.makedirs(csv_output_folder, exist_ok=True)
