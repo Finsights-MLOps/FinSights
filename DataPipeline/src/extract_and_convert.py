@@ -108,7 +108,8 @@ def convert_json_to_parquet(json_path: str, csv_output_folder: str, parquet_outp
         m = re.search(r"(\d{4})", str(date_str))
         return int(m.group(1)) if m else None
 
-    report_year = parse_year(period_of_report) or parse_year(filing_date)
+    ####  Updating report_year to pull from period_of_report only
+    report_year = parse_year(period_of_report)
     
     current_year = datetime.now().year
     actual_min_year = current_year if min_year in [None, "current", "auto", 0] else min_year
@@ -204,13 +205,14 @@ def convert_json_to_parquet(json_path: str, csv_output_folder: str, parquet_outp
                 "docID": docID,
                 "sentenceID": sentenceID,
                 "section_name": sec_key,          # will update later using map
-                "section_item": sec_key,          # new column
+                "section_item": sec_key.strip().upper(),          # new column
                 "section_ID": section_id,
                 "form": filing_type,                
                 "sentence_index": s_idx,
                 "sentence": sent,
-                "SIC": data.get("sic") or None,   # new column
-                "reportDate": filing_date if filing_date else f"{current_year}-12-23"  # new column
+                "SIC": data.get("sic") or None,     # new column
+                "filingDate": filing_date,         # new column
+                "reportDate": period_of_report or None #if period_of_report else f"{current_year}-12-31"  # new column
             }
             records.append(rec)
 
@@ -869,14 +871,18 @@ def main() -> None:
     if not os.path.isdir(extracted_filings_folder):
         os.mkdir(extracted_filings_folder)
 
-    # Create parquet output folder
-    parquet_folder = os.path.join(DATASET_DIR, "PARQUET_FILES")
+    # Create output folders
+    parquet_folder = os.path.join(DATASET_DIR, config["parquet_folder"])
     if not os.path.isdir(parquet_folder):
         os.mkdir(parquet_folder)
-    
-    csv_folder = os.path.join(DATASET_DIR, "CSV_FILES")
+
+    csv_folder = os.path.join(DATASET_DIR, config["csv_folder"])
     if not os.path.isdir(csv_folder):
         os.mkdir(csv_folder)
+
+    merged_folder = os.path.join(DATASET_DIR, config["merged_parquet_file"])
+    if not os.path.isdir(merged_folder):
+        os.mkdir(merged_folder)
 
     extraction = ExtractItems(
         remove_tables=config["remove_tables"],
@@ -1000,8 +1006,9 @@ def main() -> None:
                 # Sort by docID and sentence_index for better organization
                 merged_df = merged_df.sort(["docID", "section_ID", "sentence_index"])
                 
-                # Save merged file to EXTRACTED_FILINGS/{filing_type} folder
-                output_folder = os.path.join(extracted_filings_folder, filing_type)
+                # Save merged file to merged_folder 
+                #output_folder = os.path.join(extracted_filings_folder, filing_type)
+                output_folder = merged_folder
                 os.makedirs(output_folder, exist_ok=True)
                 
                 merged_filename = f"{filing_type}_merged_.parquet"
