@@ -1,138 +1,167 @@
 """
 Airflow DAG for SEC Filings ETL Pipeline
 Daily pipeline to download, extract, and convert SEC filings to parquet format
-
-File location: dags/sec_filings_pipeline_dag.py
 """
 
+from __future__ import annotations
 from datetime import datetime, timedelta
-from airflow import DAG
-from airflow.operators.python import PythonOperator
-from airflow.models import Variable
 import logging
+import os
+import sys
+import subprocess
+from pathlib import Path
 
-# Import custom operators from plugins folder
-# Airflow automatically adds plugins/ to path
-from plugins.sec_pipeline.operators import (
-    check_companies_csv,
-    download_sec_filings,
-    extract_items_from_filings,
-    convert_to_parquet,
-    merge_parquet_files,
-    send_success_notification,
-    send_failure_notification,
-    cleanup_temp_files
-)
+from airflow import DAG
+from airflow.providers.standard.operators.python import PythonOperator
+from airflow.task.trigger_rule import TriggerRule
 
-# Configure logging
-logger = logging.getLogger(__name__)
+from pathlib import Path
+import os, sys, logging
 
-# Default arguments for the DAG
+DAG_FILE = Path(__file__).resolve()
+
+# Airflow’s home in the official image is /opt/airflow
+AIRFLOW_HOME = Path(os.environ.get("AIRFLOW_HOME", "/opt/airflow"))
+
+# Everything you mount in docker-compose is under /opt/airflow/*
+PROJECT_ROOT   = AIRFLOW_HOME                     # /opt/airflow
+CONFIG_DIR     = PROJECT_ROOT / "config"          # /opt/airflow/config
+DATASETS_DIR   = PROJECT_ROOT / "datasets"        # /opt/airflow/datasets
+SRC_DIR        = PROJECT_ROOT / "src"             # /opt/airflow/src
+CONFIG_PATH    = CONFIG_DIR / "config.json"
+
+LOG = logging.getLogger(__name__)
+
+# Make src/ importable for task callables
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
+
+
+# ------------------------------------------------------------------------------------
+# Helpers
+# ------------------------------------------------------------------------------------
+def _check_companies_and_config():
+    companies_csv = CONFIG_DIR / "companies.csv"
+    meta_csv = DATASETS_DIR / "FILINGS_METADATA.csv"
+    missing = [str(p) for p in [CONFIG_PATH, companies_csv, DATASETS_DIR, meta_csv] if not p.exists()]
+    if missing:
+        raise FileNotFoundError(f"Required files/dirs missing: {missing}")
+    LOG.info("✅ Inputs present.")
+    LOG.info("CONFIG_PATH=%s", CONFIG_PATH)
+    LOG.info("DATASETS_DIR=%s", DATASETS_DIR)
+
+
+def _run_python_script(script_relpath: str, args: list[str] | None = None):
+    """
+    Run a Python script relative to /opt/airflow/src (inside container)
+    """
+    script = SRC_DIR / Path(script_relpath).name
+    if not script.exists():
+        raise FileNotFoundError(f"Script not found: {script}")
+    cmd = [sys.executable, str(script)]
+    if args:
+        cmd.extend(args)
+    LOG.info("▶ Running: %s", " ".join(cmd))
+    subprocess.run(cmd, check=True)
+    LOG.info("✅ Finished: %s", script_relpath)
+
+
+def task_download_sec_filings():
+    _run_python_script("download_filings.py")
+
+
+def task_extract_and_convert():
+    # Your extract_and_convert.py already: extracts → converts → merges
+    _run_python_script("extract_and_convert.py")
+
+def task_cleanup_temp_files(keep_json: bool = True):
+    raw_dir = DATASETS_DIR / "RAW_FILINGS"
+    indices_dir = DATASETS_DIR / "INDICES"
+
+    for d in [raw_dir, indices_dir]:
+        if d.exists():
+            for child in d.iterdir():
+                if child.is_file():
+                    child.unlink(missing_ok=True)
+                elif child.is_dir():
+                    for sub in child.iterdir():
+                        if sub.is_file():
+                            sub.unlink(missing_ok=True)
+            LOG.info("🧹 Cleaned %s", d)
+
+    if not keep_json:
+        extracted = DATASETS_DIR / "EXTRACTED_FILINGS"
+        if extracted.exists():
+            for child in extracted.iterdir():
+                if child.is_file():
+                    child.unlink(missing_ok=True)
+            LOG.info("🧹 Deleted EXTRACTED_FILINGS JSONs")
+
+def task_success_notify(execution_date: str):
+    LOG.info("🎉 Pipeline succeeded for %s", execution_date)
+
+def task_failure_notify(execution_date: str):
+    LOG.error("❌ Pipeline failed for %s", execution_date)
+
+# ------------------------------------------------------------------------------------
+# DAG
+# ------------------------------------------------------------------------------------
 default_args = {
-    'owner': 'data_engineering',
-    'depends_on_past': False,
-    'email': ['your_email@example.com'],
-    'email_on_failure': True,
-    'email_on_retry': False,
-    'retries': 2,
-    'retry_delay': timedelta(minutes=5),
-    'execution_timeout': timedelta(hours=6),
+    "owner": "Tooba Ali",
+    "depends_on_past": False,
+    "email": ["ali.syeda@northeastern.com"],
+    "email_on_failure": True,
+    "email_on_retry": False,
+    "retries": 2,
+    "retry_delay": timedelta(minutes=5),
+    "execution_timeout": timedelta(hours=6),
 }
 
-# DAG definition
-dag = DAG(
-    'sec_filings_etl_pipeline',
+with DAG(
+    dag_id="sec_filings_etl_pipeline",
+    description="Daily ETL: Download → Extract → Convert → Merge",
     default_args=default_args,
-    description='Daily ETL pipeline for SEC filings: Download → Extract → Convert → Merge',
-    schedule_interval='0 2 * * *',  # Run daily at 2 AM
+    schedule="0 2 * * *",   # 2 AM daily
     start_date=datetime(2025, 1, 1),
     catchup=False,
     max_active_runs=1,
-    tags=['sec', 'filings', 'etl', 'daily'],
-)
+    tags=["sec", "etl", "daily"],
+) as dag:
 
-# Task 1: Check if companies CSV exists and is valid
-check_csv_task = PythonOperator(
-    task_id='check_companies_csv',
-    python_callable=check_companies_csv,
-    op_kwargs={
-        'csv_path': Variable.get('companies_csv_path', 'config/companies.csv'),
-    },
-    dag=dag,
-)
+    check_inputs = PythonOperator(
+        task_id="check_inputs",
+        python_callable=_check_companies_and_config,
+    )
 
-# Task 2: Download SEC filings
-download_task = PythonOperator(
-    task_id='download_sec_filings',
-    python_callable=download_sec_filings,
-    op_kwargs={
-        'config_path': 'config.json',
-    },
-    dag=dag,
-)
+    download_filings = PythonOperator(
+        task_id="download_sec_filings",
+        python_callable=task_download_sec_filings,
+    )
 
-# Task 3: Extract items from downloaded filings
-extract_task = PythonOperator(
-    task_id='extract_items',
-    python_callable=extract_items_from_filings,
-    op_kwargs={
-        'config_path': 'config.json',
-    },
-    dag=dag,
-)
+    extract_convert_merge = PythonOperator(
+        task_id="extract_convert_merge",
+        python_callable=task_extract_and_convert,
+    )
 
-# Task 4: Convert JSON to Parquet
-convert_task = PythonOperator(
-    task_id='convert_to_parquet',
-    python_callable=convert_to_parquet,
-    op_kwargs={
-        'config_path': 'config.json',
-    },
-    dag=dag,
-)
+    cleanup = PythonOperator(
+        task_id="cleanup_temp_files",
+        python_callable=task_cleanup_temp_files,
+        op_kwargs={"keep_json": True},
+    )
 
-# Task 5: Merge parquet files by filing type
-merge_task = PythonOperator(
-    task_id='merge_parquet_files',
-    python_callable=merge_parquet_files,
-    op_kwargs={
-        'config_path': 'config.json',
-    },
-    dag=dag,
-)
+    success_notify = PythonOperator(
+        task_id="send_success_notification",
+        python_callable=task_success_notify,
+        op_kwargs={"execution_date": "{{ ds }}"},
+    )
 
-# Task 6: Cleanup temporary files (optional)
-cleanup_task = PythonOperator(
-    task_id='cleanup_temp_files',
-    python_callable=cleanup_temp_files,
-    op_kwargs={
-        'config_path': 'config.json',
-        'keep_json': True,  # Keep JSON files, only clean temp files
-    },
-    dag=dag,
-)
+    failure_notify = PythonOperator(
+        task_id="send_failure_notification",
+        python_callable=task_failure_notify,
+        op_kwargs={"execution_date": "{{ ds }}"},
+        trigger_rule=TriggerRule.ONE_FAILED,
+    )
 
-# Task 7: Success notification
-success_task = PythonOperator(
-    task_id='send_success_notification',
-    python_callable=send_success_notification,
-    op_kwargs={
-        'execution_date': '{{ ds }}',
-    },
-    dag=dag,
-)
-
-# Task 8: Failure notification (only runs on failure)
-failure_task = PythonOperator(
-    task_id='send_failure_notification',
-    python_callable=send_failure_notification,
-    trigger_rule='one_failed',
-    op_kwargs={
-        'execution_date': '{{ ds }}',
-    },
-    dag=dag,
-)
-
-# Define task dependencies
-check_csv_task >> download_task >> extract_task >> convert_task >> merge_task >> cleanup_task >> success_task
-[check_csv_task, download_task, extract_task, convert_task, merge_task] >> failure_task
+    # Orchestration
+    check_inputs >> download_filings >> extract_convert_merge >> cleanup >> success_notify
+    [check_inputs, download_filings, extract_convert_merge, cleanup] >> failure_notify

@@ -1,7 +1,7 @@
 {
 	"download_filings": {
-		"start_year": 2006,
-		"end_year": 2020,
+		"start_year": 2022,
+		"end_year": 2024,
 		"quarters": [1, 2, 3, 4],
 		"filing_types": ["10-K"],
 		"cik_tickers": "./config/companies.csv",

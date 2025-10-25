@@ -20,6 +20,9 @@ from nltk.tokenize import sent_tokenize
 
 from __init__ import DATASET_DIR
 from src.item_lists import item_list_10k
+
+import sys
+sys.path.insert(0, '/opt/airflow')
 from src.logger import Logger
 
 # Change the default recursion limit of 1000 to 30000

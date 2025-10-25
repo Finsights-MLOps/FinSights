@@ -7,8 +7,6 @@ datasets/
 # Logs
 logs/
 
-data-env/
-
 # Config
 #config.json
 

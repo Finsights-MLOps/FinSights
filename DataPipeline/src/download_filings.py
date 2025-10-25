@@ -24,6 +24,9 @@ from requests.exceptions import (
 from tqdm import tqdm
 from urllib3.util import Retry
 
+import sys
+sys.path.insert(0, '/opt/airflow')
+
 from src.logger import Logger
 
 # Python version compatibility for HTML parser
