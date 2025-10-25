@@ -1,7 +1,7 @@
 {
 	"download_filings": {
-		"start_year": 2021,
-		"end_year": 2025,
+		"start_year": 2006,
+		"end_year": 2020,
 		"quarters": [1, 2, 3, 4],
 		"filing_types": ["10-K"],
 		"cik_tickers": "./config/companies.csv",
@@ -15,12 +15,15 @@
 		"raw_filings_folder": "RAW_FILINGS",
 		"extracted_filings_folder": "EXTRACTED_FILINGS",
 		"filings_metadata_file": "FILINGS_METADATA.csv",
+		"parquet_folder": "PARQUET_FILES",
+		"csv_folder": "CSV_FILES",
+		"merged_parquet_file": "MERGED_EXTRACTED_FILINGS",
 		"filing_types": ["10-K"],
-		"min_year": 2020,
-       	"max_year": 2025,
+		"min_year": 2005,
+       	"max_year": "current",
 		"include_signature": false,
 		"items_to_extract": ["1", "1A","1B", "2","3","4","5","6","7","7A","8","9","9A","9B","10","11","12","13","14","15"],
 		"remove_tables": true,
-		"skip_extracted_filings": true
+		"skip_extracted_filings": false
 	}
 }
