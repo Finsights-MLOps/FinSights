@@ -24,10 +24,9 @@ from requests.exceptions import (
 from tqdm import tqdm
 from urllib3.util import Retry
 
-import sys
-sys.path.insert(0, '/opt/airflow')
-
 from src.logger import Logger
+from src import DATASET_DIR, LOGGING_DIR
+
 
 # Python version compatibility for HTML parser
 try:
@@ -39,7 +38,7 @@ except ImportError:  # Python 3.5+
 
 
 # Import constants from the project's __init__ file
-from __init__ import DATASET_DIR, LOGGING_DIR
+# from __init__ import DATASET_DIR, LOGGING_DIR
 
 # Set urllib3 logging level to critical to reduce noise
 urllib3_log = logging.getLogger("urllib3")

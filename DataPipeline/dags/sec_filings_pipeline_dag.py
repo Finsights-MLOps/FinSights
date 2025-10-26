@@ -42,8 +42,7 @@ if str(SRC_DIR) not in sys.path:
 # ------------------------------------------------------------------------------------
 def _check_companies_and_config():
     companies_csv = CONFIG_DIR / "companies.csv"
-    meta_csv = DATASETS_DIR / "FILINGS_METADATA.csv"
-    missing = [str(p) for p in [CONFIG_PATH, companies_csv, DATASETS_DIR, meta_csv] if not p.exists()]
+    missing = [str(p) for p in [CONFIG_PATH, companies_csv, DATASETS_DIR] if not p.exists()]
     if missing:
         raise FileNotFoundError(f"Required files/dirs missing: {missing}")
     LOG.info("✅ Inputs present.")
@@ -51,28 +50,34 @@ def _check_companies_and_config():
     LOG.info("DATASETS_DIR=%s", DATASETS_DIR)
 
 
-def _run_python_script(script_relpath: str, args: list[str] | None = None):
-    """
-    Run a Python script relative to /opt/airflow/src (inside container)
-    """
-    script = SRC_DIR / Path(script_relpath).name
-    if not script.exists():
-        raise FileNotFoundError(f"Script not found: {script}")
-    cmd = [sys.executable, str(script)]
+# def _run_python_script(script_relpath: str, args: list[str] | None = None):
+#     """
+#     Run a Python script relative to /opt/airflow/src (inside container)
+#     """
+#     script = SRC_DIR / Path(script_relpath).name
+#     if not script.exists():
+#         raise FileNotFoundError(f"Script not found: {script}")
+#     cmd = [sys.executable, str(script)]
+#     if args:
+#         cmd.extend(args)
+#     LOG.info("▶ Running: %s", " ".join(cmd))
+#     subprocess.run(cmd, check=True)
+#     LOG.info("✅ Finished: %s", script_relpath)
+def _run_module(module: str, args: list[str] | None = None):
+    cmd = [sys.executable, "-m", module]
     if args:
         cmd.extend(args)
     LOG.info("▶ Running: %s", " ".join(cmd))
-    subprocess.run(cmd, check=True)
-    LOG.info("✅ Finished: %s", script_relpath)
+    subprocess.run(cmd, check=True, cwd=str(AIRFLOW_HOME))
+    LOG.info("✅ Finished: %s", module)
 
 
 def task_download_sec_filings():
-    _run_python_script("download_filings.py")
-
+    _run_module("src.download_filings") 
 
 def task_extract_and_convert():
-    # Your extract_and_convert.py already: extracts → converts → merges
-    _run_python_script("extract_and_convert.py")
+    _run_module("src.extract_and_convert")
+
 
 def task_cleanup_temp_files(keep_json: bool = True):
     raw_dir = DATASETS_DIR / "RAW_FILINGS"
