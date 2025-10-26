@@ -14,7 +14,7 @@ This pipeline validates SEC filing datasets by checking schema compliance, data 
 
 ## Installation
 
-**Requirements**: Python 3.11+
+**Requirements**: Python 3.11
 
 ```bash
 # Clone repository
