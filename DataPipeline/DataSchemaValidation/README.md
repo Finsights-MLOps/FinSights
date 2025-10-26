@@ -85,3 +85,24 @@ sec-filings-mlops-ge/
 ├── run.py                # Main execution script
 └── requirements.txt      # Python dependencies
 ```
+
+##Note: For email alerts:(add this as a .env file)
+
+# Email Configuration for SEC Validation Pipeline
+
+# SMTP Settings
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+
+# Sender Credentials
+SENDER_EMAIL= #sender gmail
+SENDER_PASSWORD=#app password (setup with the gamil account using the link below)
+
+#https://myaccount.google.com/apppasswords
+  # Use app password for Gmail
+
+# Recipients (optional - uses config.py if not set)
+ALERT_EMAIL=#recipient email
+
+# Logging
+LOG_LEVEL=INFO
