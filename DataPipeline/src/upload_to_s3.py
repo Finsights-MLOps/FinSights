@@ -140,11 +140,11 @@ def upload_files_by_category(
         Dictionary with upload statistics per category
     """
     stats = {
-        "csv_files": {"uploaded": 0, "failed": 0},
-        "parquet_files": {"uploaded": 0, "failed": 0},
-        "merged_files": {"uploaded": 0, "failed": 0},
-        "extracted_files": {"uploaded": 0, "failed": 0}
-    }
+        "CSV-FILES": {"uploaded": 0, "failed": 0},
+        "PARQUET-FILES": {"uploaded": 0, "failed": 0},
+        "MERGED-SETS": {"uploaded": 0, "failed": 0},
+        "EXTRACTED-JSON": {"uploaded": 0, "failed": 0}
+    }    
     
     for category, files in files_dict.items():
         if not files:

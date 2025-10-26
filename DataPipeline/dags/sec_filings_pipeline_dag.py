@@ -75,8 +75,8 @@ def task_extract_and_convert():
 
 def task_upload_files_to_s3():
     """Connect to AWS S3 and upload processed files"""
-    #_run_module("src.upload_to_s3")
-    LOG.info(f"🎉 Pipeline succeeded for upload")
+    _run_module("src.upload_to_s3")
+    #LOG.info(f"🎉 Pipeline succeeded for upload")
     
 def task_cleanup_temp_files(keep_json: bool = True):
     """Clean up temporary files and folders"""    
