@@ -1,2 +1,0 @@
-﻿company_id,cik_int,company_name,ticker,source,tier,quality_score,selection_source,rank_within_group
-1,"1,045,810",NVIDIA CORP,NVDA,sp500,sp500_mega,"7,707.30",SNP500_TOP15,1
