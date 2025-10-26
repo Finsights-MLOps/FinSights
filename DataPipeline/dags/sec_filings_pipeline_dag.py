@@ -1,137 +1,202 @@
 """
 Airflow DAG for SEC Filings ETL Pipeline
-Daily pipeline to download, extract, and convert SEC filings to parquet format
+
 """
 
-from __future__ import annotations
-from datetime import datetime, timedelta
-import logging
+from pathlib import Path
 import os
 import sys
-import subprocess
-from pathlib import Path
+import logging
+import shutil
+from datetime import datetime, timedelta
 
+# Lightweight imports only
 from airflow import DAG
 from airflow.providers.standard.operators.python import PythonOperator
 from airflow.task.trigger_rule import TriggerRule
 
-from pathlib import Path
-import os, sys, logging
+# ============================================================================
+# Setup 
+# ============================================================================
 
-DAG_FILE = Path(__file__).resolve()
-
-# Airflow’s home in the official image is /opt/airflow
 AIRFLOW_HOME = Path(os.environ.get("AIRFLOW_HOME", "/opt/airflow"))
+SRC_DIR = AIRFLOW_HOME / "src"
 
-# Everything you mount in docker-compose is under /opt/airflow/*
-PROJECT_ROOT   = AIRFLOW_HOME                     # /opt/airflow
-CONFIG_DIR     = PROJECT_ROOT / "config"          # /opt/airflow/config
-DATASETS_DIR   = PROJECT_ROOT / "datasets"        # /opt/airflow/datasets
-SRC_DIR        = PROJECT_ROOT / "src"             # /opt/airflow/src
-CONFIG_PATH    = CONFIG_DIR / "config.json"
-
-LOG = logging.getLogger(__name__)
-
-# Make src/ importable for task callables
+# Add src to path (fast)
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
+LOG = logging.getLogger(__name__)
 
-# ------------------------------------------------------------------------------------
-# Helpers
-# ------------------------------------------------------------------------------------
+
+# ============================================================================
+# Task Callables 
+# ============================================================================
+
 def _check_companies_and_config():
+    """Check required files exist - imports done inside function"""
+    CONFIG_DIR = AIRFLOW_HOME / "config"
+    DATASETS_DIR = AIRFLOW_HOME / "datasets"
+    CONFIG_PATH = CONFIG_DIR / "config.json"
     companies_csv = CONFIG_DIR / "companies.csv"
+    
     missing = [str(p) for p in [CONFIG_PATH, companies_csv, DATASETS_DIR] if not p.exists()]
     if missing:
         raise FileNotFoundError(f"Required files/dirs missing: {missing}")
+    
     LOG.info("✅ Inputs present.")
-    LOG.info("CONFIG_PATH=%s", CONFIG_PATH)
-    LOG.info("DATASETS_DIR=%s", DATASETS_DIR)
+    LOG.info(f"CONFIG_PATH={CONFIG_PATH}")
+    LOG.info(f"DATASETS_DIR={DATASETS_DIR}")
 
 
-# def _run_python_script(script_relpath: str, args: list[str] | None = None):
-#     """
-#     Run a Python script relative to /opt/airflow/src (inside container)
-#     """
-#     script = SRC_DIR / Path(script_relpath).name
-#     if not script.exists():
-#         raise FileNotFoundError(f"Script not found: {script}")
-#     cmd = [sys.executable, str(script)]
-#     if args:
-#         cmd.extend(args)
-#     LOG.info("▶ Running: %s", " ".join(cmd))
-#     subprocess.run(cmd, check=True)
-#     LOG.info("✅ Finished: %s", script_relpath)
 def _run_module(module: str, args: list[str] | None = None):
+    """Run a Python module - subprocess imported only when called"""
+    import subprocess
+    
     cmd = [sys.executable, "-m", module]
     if args:
         cmd.extend(args)
-    LOG.info("▶ Running: %s", " ".join(cmd))
+    
+    LOG.info(f"▶ Running: {' '.join(cmd)}")
     subprocess.run(cmd, check=True, cwd=str(AIRFLOW_HOME))
-    LOG.info("✅ Finished: %s", module)
+    LOG.info(f"✅ Finished: {module}")
 
-
+def task_get_companies_list():
+    """Connect to AWS S3 and get companies.csv"""
+    _run_module("src.download_from_s3")
+    
 def task_download_sec_filings():
-    _run_module("src.download_filings") 
+    """Download filings from SEC EDGAR"""
+    _run_module("src.download_filings")
 
 def task_extract_and_convert():
+    """Extract items and convert to parquet"""
     _run_module("src.extract_and_convert")
 
-
+def task_upload_files_to_s3():
+    """Connect to AWS S3 and upload processed files"""
+    #_run_module("src.upload_to_s3")
+    LOG.info(f"🎉 Pipeline succeeded for upload")
+    
 def task_cleanup_temp_files(keep_json: bool = True):
-    raw_dir = DATASETS_DIR / "RAW_FILINGS"
-    indices_dir = DATASETS_DIR / "INDICES"
-
-    for d in [raw_dir, indices_dir]:
+    """Clean up temporary files and folders"""    
+    
+    DATASETS_DIR = AIRFLOW_HOME / "datasets"
+    CONFIG_DIR = AIRFLOW_HOME / "config"
+    
+    # Directories to completely remove
+    dirs_to_remove = [
+        DATASETS_DIR / "CSV_FILES",
+        DATASETS_DIR / "PARQUET_FILES",
+        DATASETS_DIR / "MERGED_EXTRACTED_FILINGS",        
+        DATASETS_DIR / "RAW_FILINGS" / "10-K",
+        DATASETS_DIR / "EXTRACTED_FILINGS" / "10-K"
+    ]
+    
+    # Remove specified directories
+    for d in dirs_to_remove:
         if d.exists():
-            for child in d.iterdir():
-                if child.is_file():
-                    child.unlink(missing_ok=True)
-                elif child.is_dir():
-                    for sub in child.iterdir():
-                        if sub.is_file():
-                            sub.unlink(missing_ok=True)
-            LOG.info("🧹 Cleaned %s", d)
+            try:
+                shutil.rmtree(d)
+                LOG.info(f"🧹 Deleted directory: {d}")
+            except Exception as e:
+                LOG.warning(f"⚠️  Failed to delete {d}: {e}")
+    
+    indices_dir = DATASETS_DIR / "INDICES"
+    
+    if indices_dir.exists():
+        for child in indices_dir.iterdir():
+            if child.is_file():
+                child.unlink(missing_ok=True)
+            elif child.is_dir():
+                for sub in child.iterdir():
+                    if sub.is_file():
+                        sub.unlink(missing_ok=True)
+        LOG.info("🧹 Cleaned %s", d)
+    
+    # Delete specific CSV files 
+    csv_files_to_delete = [
+        {
+            "path": DATASETS_DIR / "FILINGS_METADATA.csv"
+        },
+        {
+            "path": CONFIG_DIR / "companies.csv"
+        }
+    ]
+    
+    for file_config in csv_files_to_delete:
+        csv_file = file_config["path"]        
+        if csv_file.exists():
+            try:
+                csv_file.unlink(missing_ok=True)
+                LOG.info(f"🧹 Deleted: {csv_file.name}")
+            except Exception as e:
+                LOG.warning(f"⚠️  Failed to delete {csv_file.name}: {e}")
+        else:
+            LOG.debug(f"File not found: {csv_file.name}")
+    
+    
+    # Optionally delete JSON files from EXTRACTED_FILINGS
+    # if not keep_json:
+    #     extracted = DATASETS_DIR / "EXTRACTED_FILINGS" / "10-K"
+    #     if extracted.exists():
+    #         for child in extracted.iterdir():
+    #             if child.is_dir():
+    #                 # Delete JSON files inside subdirectories (like 10-K folder)
+    #                 for json_file in child.glob("*.json"):
+    #                     try:
+    #                         json_file.unlink(missing_ok=True)
+    #                     except Exception as e:
+    #                         LOG.warning(f"⚠️  Failed to delete {json_file}: {e}")
+    #             elif child.is_file() and child.suffix == ".json":
+    #                 try:
+    #                     child.unlink(missing_ok=True)
+    #                 except Exception as e:
+    #                     LOG.warning(f"⚠️  Failed to delete {child}: {e}")
+    #         LOG.info("🧹 Deleted EXTRACTED_FILINGS JSONs")
+    
+    LOG.info("✅ Cleanup completed")
 
-    if not keep_json:
-        extracted = DATASETS_DIR / "EXTRACTED_FILINGS"
-        if extracted.exists():
-            for child in extracted.iterdir():
-                if child.is_file():
-                    child.unlink(missing_ok=True)
-            LOG.info("🧹 Deleted EXTRACTED_FILINGS JSONs")
 
 def task_success_notify(execution_date: str):
-    LOG.info("🎉 Pipeline succeeded for %s", execution_date)
+    """Log success message"""
+    LOG.info(f"🎉 Pipeline succeeded for {execution_date}")
+
 
 def task_failure_notify(execution_date: str):
-    LOG.error("❌ Pipeline failed for %s", execution_date)
+    """Log failure message"""
+    LOG.error(f"❌ Pipeline failed for {execution_date}")
 
-# ------------------------------------------------------------------------------------
-# DAG
-# ------------------------------------------------------------------------------------
+
+# ============================================================================
+# DAG Definition
+# ============================================================================
+
 default_args = {
-    "owner": "Tooba Ali",
+    "owner": "Sridipta Roy",
     "depends_on_past": False,
-    "email": ["ali.syeda@northeastern.com"],
+    "email": ["roy.sr@northeastern.com"],
     "email_on_failure": True,
     "email_on_retry": False,
-    "retries": 2,
-    "retry_delay": timedelta(minutes=5),
-    "execution_timeout": timedelta(hours=6),
+    "retries": 1,  # Reduced for faster debugging
+    "retry_delay": timedelta(minutes=2),
+    "execution_timeout": timedelta(minutes=30),  # Reduced from 6 hours
 }
 
 with DAG(
     dag_id="sec_filings_etl_pipeline",
     description="Daily ETL: Download → Extract → Convert → Merge",
     default_args=default_args,
-    schedule="0 2 * * *",   # 2 AM daily
     start_date=datetime(2025, 1, 1),
     catchup=False,
     max_active_runs=1,
     tags=["sec", "etl", "daily"],
 ) as dag:
+    
+    get_companies_list = PythonOperator(
+        task_id="get_companies_list",
+        python_callable=task_get_companies_list,
+    )
 
     check_inputs = PythonOperator(
         task_id="check_inputs",
@@ -147,11 +212,16 @@ with DAG(
         task_id="extract_convert_merge",
         python_callable=task_extract_and_convert,
     )
+    
+    upload_processed_files = PythonOperator(
+        task_id="upload_processed_files",
+        python_callable=task_upload_files_to_s3,
+    )
 
     cleanup = PythonOperator(
         task_id="cleanup_temp_files",
         python_callable=task_cleanup_temp_files,
-        op_kwargs={"keep_json": True},
+        op_kwargs={"keep_json": False},
     )
 
     success_notify = PythonOperator(
@@ -167,6 +237,6 @@ with DAG(
         trigger_rule=TriggerRule.ONE_FAILED,
     )
 
-    # Orchestration
-    check_inputs >> download_filings >> extract_convert_merge >> cleanup >> success_notify
-    [check_inputs, download_filings, extract_convert_merge, cleanup] >> failure_notify
+    # Task dependencies
+    get_companies_list >> check_inputs >> download_filings >> extract_convert_merge >> upload_processed_files >> cleanup >> success_notify
+    [get_companies_list, check_inputs, download_filings, extract_convert_merge, upload_processed_files, cleanup] >> failure_notify

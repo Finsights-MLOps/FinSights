@@ -178,6 +178,7 @@ def main():
         # Check if each filing in the new indices already exists in the old metadata
         # If it doesn't, add it to the list of filings to be downloaded
         for _, series in tqdm(df.iterrows(), total=len(df), ncols=100):
+            series = series.copy()
             if (
                 len(old_df) == 0
                 or len(old_df[old_df["html_index"] == series["html_index"]]) == 0

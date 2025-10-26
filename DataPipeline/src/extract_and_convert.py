@@ -16,7 +16,27 @@ import polars as pl
 from bs4 import BeautifulSoup
 from pathos.pools import ProcessPool
 from tqdm import tqdm
-from nltk.tokenize import sent_tokenize
+#from nltk.tokenize import sent_tokenize
+
+import nltk
+try:
+    from nltk.tokenize import sent_tokenize
+    # Test if punkt_tab is available
+    sent_tokenize("Test sentence.")
+except LookupError:
+    print("⚠️  NLTK punkt_tab not found. Downloading...")
+    try:
+        nltk.download('punkt_tab', quiet=False)
+        from nltk.tokenize import sent_tokenize
+        print("✅ NLTK punkt_tab downloaded successfully")
+    except Exception as e:
+        print(f"❌ Failed to download NLTK data: {e}")
+        print("⚠️  Falling back to simple regex tokenizer")
+        # Fallback tokenizer
+        def sent_tokenize(text: str) -> list:
+            """Simple fallback sentence tokenizer"""
+            sentences = re.split(r'(?<=[.!?])\s+', text)
+            return [s.strip() for s in sentences if s.strip()]
 
 # from __init__ import DATASET_DIR
 from src import DATASET_DIR
