@@ -2,17 +2,12 @@
 import json
 import re
 from pathlib import Path
-
 import pandas as pd
 import pytest
 from bs4 import BeautifulSoup
 
 import src.extract_and_convert as ec
 
-
-# -------------------------
-# convert_json_to_parquet()
-# -------------------------
 
 def test_convert_json_to_parquet(tmp_path, monkeypatch):
     # Prepare a minimal JSON with one item and a period_of_report inside the allowed range
@@ -113,7 +108,7 @@ def test_convert_json_to_parquet_year_out_of_range(tmp_path):
 # HtmlStripper + helpers
 # -------------------------
 
-def test_html_stripper_basic():
+def test_html_stripper():
     s = ec.HtmlStripper()
     s.feed("<p>Hello <b>World</b></p>")
     assert s.get_data() == "Hello World"
@@ -166,7 +161,7 @@ def test_handle_spans_html_and_text(tmp_path):
     )
     inst = ec.ExtractItems(
         remove_tables=False,
-        items_to_extract=[],    # not used here
+        items_to_extract=[],
         include_signature=False,
         raw_files_folder=".",   # dummy
         extracted_files_folder=".",  # dummy
