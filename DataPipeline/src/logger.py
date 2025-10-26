@@ -2,7 +2,8 @@ import logging
 import os
 from time import gmtime, strftime
 
-from __init__ import LOGGING_DIR
+# from __init__ import LOGGING_DIR
+from src import LOGGING_DIR
 
 
 class Logger:
