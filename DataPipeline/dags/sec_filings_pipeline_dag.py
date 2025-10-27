@@ -73,6 +73,10 @@ def task_extract_and_convert():
     """Extract items and convert to parquet"""
     _run_module("src.extract_and_convert")
 
+# def task_validate_data():
+#     """Validate extracted data using Great Expectations"""
+#     _run_module("datavalidation.run")
+    
 def task_upload_files_to_s3():
     """Connect to AWS S3 and upload processed files"""
     _run_module("src.upload_to_s3")
@@ -212,6 +216,11 @@ with DAG(
         task_id="extract_convert_merge",
         python_callable=task_extract_and_convert,
     )
+
+    # validate_data = PythonOperator(
+    #     task_id="validate_data",
+    #     python_callable=task_validate_data,
+    # )
     
     upload_processed_files = PythonOperator(
         task_id="upload_processed_files",

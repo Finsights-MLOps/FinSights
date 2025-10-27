@@ -11,7 +11,7 @@ import pandas as pd
 from data_loader import SECDataLoader
 from ge_validator import SECDataSchemaGeneratorGE
 from ge_setup import initialize_great_expectations
-from config import OUTPUT_DIR, LOG_DIR
+from config import OUTPUT_DIR, LOG_DIR, S3_CONFIG
 from email_alerter import EmailAlerter
 
 # Setup logging
@@ -30,7 +30,21 @@ class SECValidationPipeline:
     
     def __init__(self, data_path: Optional[str] = None):
         self.data_path = data_path
-        self.loader = SECDataLoader(data_path)
+        
+        # Check if we should use S3 from config
+        if S3_CONFIG['enabled'] and not data_path:
+            # Use S3 configuration
+            self.loader = SECDataLoader(
+                use_s3=True,
+                bucket_name=S3_CONFIG['bucket_name'],
+                s3_key=S3_CONFIG['s3_key']
+            )
+            logger.info(f"Using S3 data source: s3://{S3_CONFIG['bucket_name']}/{S3_CONFIG['s3_key']}")
+        else:
+            # Use local file
+            self.loader = SECDataLoader(data_path)
+            logger.info(f"Using local data source: {data_path}")
+        
         self.validator = SECDataSchemaGeneratorGE(data_path)
         self.context = initialize_great_expectations()
         self.results = {}
@@ -208,5 +222,5 @@ if __name__ == "__main__":
         data_path = sys.argv[1]
         results = run_validation(data_path)
     else:
-        # Run with sample data for testing
-        results = run_validation(sample=True)
+        # Run with default configuration (will use S3 if enabled)
+        results = run_validation()
