@@ -2,12 +2,16 @@
 .vscode
 
 # Datasets
-datasets/
+datasets/CSV_FILES
+datasets/PARQUET_FILES
+datasets/EXTRACTED_FILINGS
+datasets/RAW_FILINGS
+datasets/INDICES
+datasets/MERGED_EXTARCTED_FILINGS/10-K_merged.csv
 
 # Logs
 logs/
 
-data-env/
 
 # Config
 #config.json
@@ -172,3 +176,4 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
+/10-K_merged_.parquet
