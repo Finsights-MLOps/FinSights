@@ -1,6 +1,5 @@
 """
 Airflow DAG for SEC Filings ETL Pipeline
-
 """
 
 from pathlib import Path
@@ -161,6 +160,13 @@ def task_cleanup_temp_files(keep_json: bool = True):
     
     LOG.info("✅ Cleanup completed")
 
+def task_merge_s3_data():
+    """
+    Merge historical/final + incremental data on S3
+    Runs src_aws_etl.etl.merge_pipeline module
+    """
+    _run_module("src_aws_etl.etl.merge_pipeline")
+    LOG.info("S3 merge pipeline completed")
 
 def task_success_notify(execution_date: str):
     """Log success message"""
@@ -233,6 +239,13 @@ with DAG(
         op_kwargs={"keep_json": False},
     )
 
+    # Merge S3 data - AWS.
+    merge_s3_data = PythonOperator(
+        task_id="merge_s3_incremental_data",
+        python_callable=task_merge_s3_data,
+        execution_timeout=timedelta(minutes=15),
+    )
+
     success_notify = PythonOperator(
         task_id="send_success_notification",
         python_callable=task_success_notify,
@@ -247,5 +260,6 @@ with DAG(
     )
 
     # Task dependencies
-    get_companies_list >> check_inputs >> download_filings >> extract_convert_merge >> upload_processed_files >> cleanup >> success_notify
-    [get_companies_list, check_inputs, download_filings, extract_convert_merge, upload_processed_files, cleanup] >> failure_notify
+    
+    get_companies_list >> check_inputs >> download_filings >> extract_convert_merge >> upload_processed_files >> cleanup >> merge_s3_data >> success_notify
+    [get_companies_list, check_inputs, download_filings, extract_convert_merge, upload_processed_files, cleanup, merge_s3_data] >> failure_notify
