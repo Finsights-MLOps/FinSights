@@ -15,39 +15,85 @@ from src_metrics import data_loading
 from src_metrics import data_preprocessing
 from utils import notifier
 from utils.helpers import setup_logger
+import os 
+import json
+import boto3
+from urllib.parse import urlparse
+
 
 logger = setup_logger()
 
 def ingest_data_task(**context):
-    """Wrapper for data ingestion task."""
-    return data_ingestion.ingest_data(n=2)
+    bucket = os.environ["S3_BUCKET_NAME"]
+    raw_data = data_ingestion.ingest_data(n=2)  # dict {ticker: facts}
+    payload = json.dumps(raw_data, ensure_ascii=False).encode("utf-8")
+
+    key = f"raw/{context['dag'].dag_id}/{context['task'].task_id}/{context['run_id'].replace(':','_')}.json"
+    s3 = boto3.client("s3")
+    s3.put_object(Bucket=bucket, Key=key, Body=payload, ContentType="application/json")
+
+    context["ti"].xcom_push(key="raw_s3_uri", value=f"s3://{bucket}/{key}")
+    return None  # IMPORTANT
+
 
 def preprocess_data_task(**context):
-    """Wrapper for data preprocessing task."""
     ti = context['ti']
     raw_data = ti.xcom_pull(task_ids='qualitative_extraction')
-    
     if not raw_data:
         logger.warning("No raw data received from ingestion task")
         return None
-    
-    processed_data = []
+
+    # Build big list via your pandas function
+    processed = []
     for ticker, facts in raw_data.items():
-        processed = data_preprocessing.process_company_data(ticker, facts)
-        processed_data.extend(processed)
-    
-    return processed_data
+        processed.extend(data_preprocessing.process_company_data(ticker, facts))
+
+    # (A) safest: use default adapter
+    def _json_default(o):
+        try:
+            import numpy as np
+            if isinstance(o, np.integer): return int(o)
+            if isinstance(o, np.floating): return float(o)
+            if o is np.nan: return None
+        except Exception:
+            pass
+        try:
+            import pandas as pd
+            if o is pd.NA: return None
+        except Exception:
+            pass
+        return str(o)
+
+    payload = json.dumps(processed, ensure_ascii=False, default=_json_default).encode("utf-8")
+
+    bucket = os.environ["S3_BUCKET_NAME"]
+    key = f"preprocessed/{context['dag'].dag_id}/{context['task'].task_id}/{context['run_id'].replace(':','_')}.json"
+
+    s3 = boto3.client("s3")
+    s3.put_object(Bucket=bucket, Key=key, Body=payload, ContentType="application/json")
+
+    ti.xcom_push(key="metrics_s3_uri", value=f"s3://{bucket}/{key}")
+    return None  # IMPORTANT: don't return the big payload
+
 
 def load_data_task(**context):
-    """Wrapper for data loading task."""
-    ti = context['ti']
-    processed_data = ti.xcom_pull(task_ids='preprocess_data')
-    
-    if not processed_data:
-        logger.warning("No processed data to save")
+    ti = context["ti"]
+    s3_uri = ti.xcom_pull(task_ids="preprocess_data", key="metrics_s3_uri")
+    if not s3_uri:
+        logger.warning("No S3 URI from preprocess step")
         return None
-    
-    return data_loading.save_to_s3(processed_data)
+
+    u = urlparse(s3_uri)                 # s3://bucket/key -> Parse
+    bucket, key = u.netloc, u.path.lstrip("/")
+
+    s3 = boto3.client("s3")
+    obj = s3.get_object(Bucket=bucket, Key=key)
+    data = json.loads(obj["Body"].read().decode("utf-8"))
+
+    logger.info(f"Loaded {len(data):,} records from {s3_uri}")
+    # (Optional) run validations here…
+
+    return s3_uri   # tiny return; still set do_xcom_push=False on operator
 
 default_args = {
     "owner": "Finsights",
@@ -75,16 +121,19 @@ with DAG(
     data_ingest = PythonOperator(
         task_id="qualitative_extraction",
         python_callable=ingest_data_task,
+        do_xcom_push=False, 
     )
 
     data_preprocess = PythonOperator(
         task_id="preprocess_data",
         python_callable=preprocess_data_task,
+        do_xcom_push=False, 
     )
 
     data_load = PythonOperator(
         task_id="load_to_s3",
         python_callable=load_data_task,
+        do_xcom_push=False, 
     )
 
     notify_failure_task = PythonOperator(
