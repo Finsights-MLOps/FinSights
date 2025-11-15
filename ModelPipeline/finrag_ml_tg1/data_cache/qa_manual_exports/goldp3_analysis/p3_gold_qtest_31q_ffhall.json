@@ -1,0 +1,1148 @@
+[
+  {
+    "question_id": "P3V2-Q001",
+    "cik_int": [
+      34088
+    ],
+    "company_name": [
+      "EXXON MOBIL CORP"
+    ],
+    "years": [
+      2008
+    ],
+    "question_text": "What does EXXON MOBIL CORP report as its total revenue in 2008, and how is this figure described in the filing?",
+    "answer_type": "span",
+    "answer_text": "Reference is made to the following in the Financial Section of this report: \u2022 Consolidated financial statements, together with the report thereon of PricewaterhouseCoopers LLP dated February 27, 2009, beginning with the section entitled \u201cReport of Independent Registered Public Accounting Firm\u201d and continuing through \u201cNote 18: Income, Sales-Based and Other Taxes\u201d; \u2022 \u201cQuarterly Information\u201d (unaudited); \u2022 \u201cSupplemental Information on Oil and Gas Exploration and Production Activities\u201d (unaudited); and \u2022 \u201cFrequently Used Terms\u201d (unaudited).",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000034088_10-K_2008_section_8_2"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7",
+      "ITEM_8"
+    ],
+    "notes": "Numeric KPI-based narrative for total revenue.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q002",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2006
+    ],
+    "question_text": "What does ELI LILLY & Co report as its net income in 2006, and how is this figure described in the filing?",
+    "answer_type": "span",
+    "answer_text": "A 5 percent change in the valuation allowance would result in a change in net income of approximately $25 million.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2006_section_7_326"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7",
+      "ITEM_8"
+    ],
+    "notes": "Numeric KPI-based narrative for net income.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q003",
+    "cik_int": [
+      104169
+    ],
+    "company_name": [
+      "Walmart Inc."
+    ],
+    "years": [
+      2018
+    ],
+    "question_text": "What does Walmart Inc. report as its operating income in 2018, and how is this figure described in the filing?",
+    "answer_type": "span",
+    "answer_text": "As a result of the factors discussed above, segment operating income decreased $689 million and $149 million for fiscal 2018 and 2017, respectively.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000104169_10-K_2018_section_7_191"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7",
+      "ITEM_8"
+    ],
+    "notes": "Numeric KPI-based narrative for operating income.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q004",
+    "cik_int": [
+      200406
+    ],
+    "company_name": [
+      "JOHNSON & JOHNSON"
+    ],
+    "years": [
+      2016
+    ],
+    "question_text": "What does JOHNSON & JOHNSON report as its cash flow from operations in 2016, and how is this figure described in the filing?",
+    "answer_type": "span",
+    "answer_text": "Report of Independent Registered Public Accounting Firm To the Shareholders and Board of Directors of Johnson & Johnson In our opinion, the accompanying consolidated balance sheets and the related consolidated statements of earnings, statements of comprehensive income, statements of equity, and statements of cash flows present fairly, in all material respects, the financial position of Johnson & Johnson and its subsidiaries at January 3, 2016 and December 28, 2014, and the results of their operations and their cash flows for each of the three years in the period ended January 3, 2016 in conformity with accounting principles generally accepted in the United States of America.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000200406_10-K_2016_section_8_945"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7",
+      "ITEM_8"
+    ],
+    "notes": "Numeric KPI-based narrative for cash from operations.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q005",
+    "cik_int": [
+      320193
+    ],
+    "company_name": [
+      "Apple Inc."
+    ],
+    "years": [
+      2012
+    ],
+    "question_text": "How does Apple Inc. describe its earnings per share (EPS) in 2012, and what key disclosure does it provide about EPS computation?",
+    "answer_type": "span",
+    "answer_text": "Note 9 - Selected Quarterly Financial Information (Unaudited) The following tables show a summary of the Company\u2019s quarterly financial information for each of the four quarters of 2012 and 2011 (in millions, except per share amounts): Basic and diluted earnings per share are computed independently for each of the quarters presented.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000320193_10-K_2012_section_8_413"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7",
+      "ITEM_8"
+    ],
+    "notes": "EPS disclosure around computation.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q006",
+    "cik_int": [
+      789019
+    ],
+    "company_name": [
+      "MICROSOFT CORP"
+    ],
+    "years": [
+      2012
+    ],
+    "question_text": "In its 2012 Form 10-K, how does Microsoft describe the impact of a specific goodwill impairment charge on diluted earnings per share?",
+    "answer_type": "span",
+    "answer_text": "Diluted earnings per share were negatively impacted by the non-tax deductible goodwill impairment charge, which decreased diluted earnings per share by $0.73.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000789019_10-K_2012_section_7_59"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7",
+      "ITEM_8"
+    ],
+    "notes": "EPS impact of a specific charge.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q007",
+    "cik_int": [
+      814585
+    ],
+    "company_name": [
+      "MBIA INC"
+    ],
+    "years": [
+      2012
+    ],
+    "question_text": "How does MBIA INC describe its basic earnings per share computation in its 2012 Form 10-K?",
+    "answer_type": "span",
+    "answer_text": "Note 17: Earnings Per Share Basic earnings per share excludes dilution and is computed by dividing income available to common shareholders by the weighted average number of common shares outstanding during the period.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000814585_10-K_2012_section_8_1456"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7",
+      "ITEM_8"
+    ],
+    "notes": "Definition of basic EPS.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q008",
+    "cik_int": [
+      814585
+    ],
+    "company_name": [
+      "MBIA INC"
+    ],
+    "years": [
+      2012
+    ],
+    "question_text": "In its 2012 EPS disclosure, what specific detail does MBIA provide about unvested restricted stock and units?",
+    "answer_type": "span",
+    "answer_text": "MBIA Inc. and Subsidiaries Notes to Consolidated Financial Statements Note 17: Earnings Per Share (continued) The following table presents the computation of basic and diluted earnings per share for the years ended December 31, 2012, 2011 and 2010: (1)-Includes 5,514,523, 5,080,742 and 5,325,428 of unvested restricted stock and units that receive nonforfeitable dividends or dividend equivalents for the years ended December",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000814585_10-K_2012_section_8_1459"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7",
+      "ITEM_8"
+    ],
+    "notes": "Detail on unvested restricted stock in EPS computation.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q009",
+    "cik_int": [
+      104169
+    ],
+    "company_name": [
+      "Walmart Inc."
+    ],
+    "years": [
+      2019
+    ],
+    "question_text": "How does Walmart Inc. explain the increase in its long-term debt in fiscal 2019?",
+    "answer_type": "span",
+    "answer_text": "Our total long-term debt increased $11.6 billion for fiscal 2019, primarily due to the net proceeds from issuance of long-term debt to fund a portion of the purchase price for Flipkart and for general corporate purposes.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000104169_10-K_2019_section_7_209"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "Debt increase driver explanation.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q010",
+    "cik_int": [
+      104169
+    ],
+    "company_name": [
+      "Walmart Inc."
+    ],
+    "years": [
+      2020
+    ],
+    "question_text": "How does Walmart Inc. describe the change in its long-term debt in fiscal 2020?",
+    "answer_type": "span",
+    "answer_text": "The increase was primarily due to the $15.9 billion of net proceeds received in the prior year from the issuance of long-term debt to fund a portion of the purchase price for Flipkart partially offset by $5.5 billion of additional long-term debt in the current year to fund general business operations.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000104169_10-K_2020_section_7_219"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "Debt change explanation.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q011",
+    "cik_int": [
+      200406
+    ],
+    "company_name": [
+      "JOHNSON & JOHNSON"
+    ],
+    "years": [
+      2022
+    ],
+    "question_text": "How does JOHNSON & JOHNSON describe the performance of its Baby Care franchise in 2022?",
+    "answer_type": "span",
+    "answer_text": "The Baby Care franchise sales of $1.6 billion increased 3.2% compared to the prior year. Growth was driven by AVEENO\u00ae Asia Pacific eCommerce strength, innovation and COVID-19 recovery.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000200406_10-K_2022_section_7_54"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "Baby Care segment performance.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q012",
+    "cik_int": [
+      200406
+    ],
+    "company_name": [
+      "JOHNSON & JOHNSON"
+    ],
+    "years": [
+      2023
+    ],
+    "question_text": "What factors does JOHNSON & JOHNSON cite for operational declines in certain consumer categories in 2023?",
+    "answer_type": "span",
+    "answer_text": "The operational decline was due to portfolio simplification in the U.S., competitive pressures in EMEA and China, category decline and pricing pressures in EMEA, as well as suspension of personal care sales in Russia and negative COVID-19 impacts in China.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000200406_10-K_2023_section_7_54"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "Consumer category decline factors.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q013",
+    "cik_int": [
+      200406
+    ],
+    "company_name": [
+      "JOHNSON & JOHNSON"
+    ],
+    "years": [
+      2024
+    ],
+    "question_text": "How does JOHNSON & JOHNSON explain the change in infectious disease product sales in 2024?",
+    "answer_type": "span",
+    "answer_text": "Infectious disease products sales were $3.4 billion in 2024, a decline of 23.1% as compared to the prior year primarily driven by a decline in COVID-19 vaccine revenue.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000200406_10-K_2024_section_7_61"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "Infectious disease product sales decline driver.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q014",
+    "cik_int": [
+      1276520
+    ],
+    "company_name": [
+      "GENWORTH FINANCIAL INC"
+    ],
+    "years": [
+      2017
+    ],
+    "question_text": "In its 2017 Form 10-K, how does GENWORTH FINANCIAL INC describe the role of APRA in determining minimum regulatory capital requirements for ADIs?",
+    "answer_type": "span",
+    "answer_text": "APRA also determines the minimum regulatory capital requirements for ADIs.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001276520_10-K_2017_section_1A_435"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Regulatory capital requirement definition.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q015",
+    "cik_int": [
+      1276520
+    ],
+    "company_name": [
+      "GENWORTH FINANCIAL INC"
+    ],
+    "years": [
+      2010
+    ],
+    "question_text": "How does GENWORTH FINANCIAL INC describe the factors affecting the availability of additional funding in its 2010 Form 10-K?",
+    "answer_type": "span",
+    "answer_text": "The availability of additional funding will depend on a variety of factors such as market conditions, regulatory considerations, the general availability of credit, the overall availability of credit to the financial services industry, the level of activity and availability of reinsurers, our credit ratings and credit capacity and the performance of and outlook for our business.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001276520_10-K_2010_section_7_1424"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "Liquidity and funding availability factors.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q016",
+    "cik_int": [
+      814585
+    ],
+    "company_name": [
+      "MBIA INC"
+    ],
+    "years": [
+      2006
+    ],
+    "question_text": "In its 2006 Form 10-K, how does MBIA INC describe the regulatory requirement for certain fixed-maturity investments?",
+    "answer_type": "span",
+    "answer_text": "The following tables present the amortized cost and fair value of the available-for-sale fixed-maturity, short-term and other investments included in the consolidated investment portfolio of the Company as of December 31, 2006 and 2005: MBIA Inc. and Subsidiaries Notes to Consolidated Financial Statements Note 11: Investments (continued) Fixed-maturity investments carried at fair value of $13.0 million and $12.9 million as of December 31, 2006 and 2005, respectively, were on deposit with various regulatory authorities to comply with insurance laws.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000814585_10-K_2006_section_8_438"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_8"
+    ],
+    "notes": "Regulatory deposits requirement for certain investments.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q017",
+    "cik_int": [
+      814585
+    ],
+    "company_name": [
+      "MBIA INC"
+    ],
+    "years": [
+      2022
+    ],
+    "question_text": "How does MBIA INC describe its exposure to foreign exchange rate risk in its 2022 Form 10-K?",
+    "answer_type": "span",
+    "answer_text": "FOREIGN EXCHANGE RATE SENSITIVITY The Company is exposed to foreign exchange rate risk in respect of liabilities denominated in currencies other than U.S. dollars.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000814585_10-K_2022_section_7A_7"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7A"
+    ],
+    "notes": "FX risk sensitivity description.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q018",
+    "cik_int": [
+      1018724
+    ],
+    "company_name": [
+      "AMAZON COM INC"
+    ],
+    "years": [
+      2020
+    ],
+    "question_text": "In its 2020 Form 10-K, how does Amazon describe the effect of the COVID-19 pandemic on its earnings estimates?",
+    "answer_type": "span",
+    "answer_text": "The effects of the COVID-19 pandemic on our business make estimates of future earnings in relevant jurisdictions more challenging.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001018724_10-K_2020_section_8_123"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_8"
+    ],
+    "notes": "COVID-19 impact on earnings estimates.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q019",
+    "cik_int": [
+      1318605
+    ],
+    "company_name": [
+      "Tesla, Inc."
+    ],
+    "years": [
+      2014
+    ],
+    "question_text": "How does Tesla describe the role of regulatory credits in California and certain other states in its 2014 Form 10-K?",
+    "answer_type": "span",
+    "answer_text": "Regulatory Credits Sales California and certain other states have laws in place requiring vehicle manufacturers to ensure that a portion of the vehicles delivered for sale in that state during each model year are zero emission vehicles.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001318605_10-K_2014_section_8_70"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_8"
+    ],
+    "notes": "Regulatory credits background.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q020",
+    "cik_int": [
+      1018724
+    ],
+    "company_name": [
+      "AMAZON COM INC"
+    ],
+    "years": [
+      2019
+    ],
+    "question_text": "How does Amazon describe the treatment of translation adjustments related to foreign currency in its 2019 Form 10-K?",
+    "answer_type": "span",
+    "answer_text": "Translation adjustments are included in \u201cAccumulated other comprehensive income (loss),\u201d a separate component of stockholders\u2019 equity, and in the \u201cForeign currency effect on cash, cash equivalents, and restricted cash,\u201d on our consolidated statements of cash flows.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001018724_10-K_2019_section_8_231"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_8"
+    ],
+    "notes": "Accounting treatment of FX translation adjustments.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q021",
+    "cik_int": [
+      1141391
+    ],
+    "company_name": [
+      "Mastercard Inc"
+    ],
+    "years": [
+      2010
+    ],
+    "question_text": "In its 2010 Form 10-K, how does Mastercard describe its foreign currency contracts as of December 31, 2010?",
+    "answer_type": "span",
+    "answer_text": "MASTERCARD INCORPORATED NOTES TO CONSOLIDATED FINANCIAL STATEMENTS-continued As of December 31, 2010, all contracts to purchase and sell foreign currency had been entered into with customers of MasterCard.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001141391_10-K_2010_section_8_959"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_8"
+    ],
+    "notes": "FX contract counterparty description.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V3-Q001",
+    "cik_int": [
+      104169
+    ],
+    "company_name": [
+      "Walmart Inc."
+    ],
+    "years": [
+      2018,
+      2019,
+      2020
+    ],
+    "question_text": "Across its fiscal 2018-2020 10-K filings, how does Walmart Inc. explain the main drivers behind changes in its long-term debt and related cash flows from financing activities?",
+    "answer_type": "span",
+    "answer_text": "Walmart links changes in long-term debt over this period to deliberate capital structure actions. In 2018 it highlights losses and cash outflows from the early extinguishment of higher-rate debt, which were intended to reduce future interest expense. In 2019 and 2020 it explains that large new issuances and subsequent movements in long-term debt were primarily driven by financing the Flipkart acquisition and funding broader corporate and operating needs, with short-term borrowings and repayments shifting as those long-term debt transactions settled.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000104169_10-K_2018_section_7_142",
+      "0000104169_10-K_2018_section_7_224",
+      "0000104169_10-K_2019_section_7_209",
+      "0000104169_10-K_2020_section_7_219"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_year",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "Cross-year KPI trend question focusing on long-term debt, debt extinguishment and Flipkart-related funding.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.616918Z",
+    "curation_confidence": 0.83
+  },
+  {
+    "question_id": "P3V3-Q002",
+    "cik_int": [
+      1326801
+    ],
+    "company_name": [
+      "Meta Platforms, Inc."
+    ],
+    "years": [
+      2019,
+      2022,
+      2024
+    ],
+    "question_text": "Over time, how does Meta Platforms describe the regulatory and policy risks that could affect its advertising business and use of data, including anti-corruption laws, privacy rules and emerging AI frameworks?",
+    "answer_type": "span",
+    "answer_text": "Meta warns that its advertising revenue and targeting capabilities are exposed to multiple layers of regulation. In its 2019 filings it notes that advertising revenue can be constrained by laws or policies that limit which marketers it can work with or where ads can run, and it explicitly flags ongoing compliance obligations under the U.S. Foreign Corrupt Practices Act and similar anti-corruption regimes. In later filings, including 2022, the company stresses that privacy and data-use rules can directly restrict its ability to use data for advertising purposes. By 2024 it adds that rapidly evolving AI-focused legal frameworks, such as the EU AI Act, create further uncertainty and potential compliance costs that could affect how its AI-driven ad systems operate.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001326801_10-K_2019_section_1A_30",
+      "0001326801_10-K_2019_section_1A_473",
+      "0001326801_10-K_2022_section_1A_92",
+      "0001326801_10-K_2024_section_1A_154"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_year",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Narrative risk-factor trend question spanning ad regulation, anti-corruption, privacy/data-use limits and AI regulation.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617006Z",
+    "curation_confidence": 0.82
+  },
+  {
+    "question_id": "P3V3-Q003",
+    "cik_int": [
+      200406
+    ],
+    "company_name": [
+      "JOHNSON & JOHNSON"
+    ],
+    "years": [
+      2022,
+      2023,
+      2024
+    ],
+    "question_text": "Between 2022 and 2024, how does Johnson & Johnson describe the impact of COVID-19 on selected consumer and infectious disease product sales in its 10-K MD&A discussions?",
+    "answer_type": "span",
+    "answer_text": "Johnson & Johnson initially portrays COVID-19 as a tailwind and then a headwind for different parts of the portfolio. In 2022 it notes that certain consumer franchises benefited from innovation, e-commerce strength and COVID-19 recovery. By 2023 it reports operational declines in some personal care categories, citing negative COVID-19 impacts in China and broader pressure on consumption. In its 2024 MD&A the company explains that infectious disease product sales fell versus the prior year primarily because COVID-19 vaccine revenue declined, making pandemic-related demand a key driver of the trend.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000200406_10-K_2022_section_7_54",
+      "0000200406_10-K_2023_section_7_54",
+      "0000200406_10-K_2024_section_7_61"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_year",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "COVID-19-related demand pattern for selected consumer and infectious disease products.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617054Z",
+    "curation_confidence": 0.83
+  },
+  {
+    "question_id": "P3V3-Q004",
+    "cik_int": [
+      1326801
+    ],
+    "company_name": [
+      "Meta Platforms, Inc."
+    ],
+    "years": [
+      2015,
+      2016
+    ],
+    "question_text": "In its 2015 and 2016 Form 10-K filings, does Meta explicitly attribute movements in \"Other income/(expense), net\" to foreign currency remeasurement, and what does it say?",
+    "answer_type": "boolean",
+    "answer_text": "Yes. Meta explains that changes in 'Other income/(expense), net' in both 2015 and 2016 were driven primarily by the periodic remeasurement of its foreign currency balances. One year it notes an increase and in the other a decrease, but in each case it points to foreign currency remeasurement as the main cause.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001326801_10-K_2016_section_7_216",
+      "0001326801_10-K_2015_section_7_249"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_year",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "Binary yes/no plus short supporting explanation, grounded in MD&A commentary.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617098Z",
+    "curation_confidence": 0.86
+  },
+  {
+    "question_id": "P3V3-Q005",
+    "cik_int": [
+      104169,
+      320193,
+      789019,
+      813762
+    ],
+    "company_name": [
+      "Walmart Inc.",
+      "Apple Inc.",
+      "MICROSOFT CORP",
+      "ICAHN ENTERPRISES L.P."
+    ],
+    "years": [
+      2010
+    ],
+    "question_text": "For 2010, how do Walmart, Apple, Microsoft and Icahn Enterprises describe their exposure to liquidity and credit-related risks in their Item 1A risk-factor discussions?",
+    "answer_type": "list",
+    "answer_text": [
+      "Walmart notes that certain legal proceedings and contingencies could adversely affect its results of operations, financial condition and liquidity.",
+      "Apple explains that the credit quality, ratings and pricing of its investment portfolio expose it to potential deterioration or losses that could impact financial results.",
+      "Microsoft highlights that tax and regulatory developments can have a material adverse impact on its tax expense and cash flows.",
+      "Icahn Enterprises warns that difficult market conditions for highly leveraged investments and defaults by counterparties or institutions could significantly affect funds it manages and, in turn, its own liquidity and results."
+    ],
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000104169_10-K_2010_section_1A_78",
+      "0000320193_10-K_2010_section_1A_204",
+      "0000789019_10-K_2010_section_1A_145",
+      "0000813762_10-K_2010_section_1A_155"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_company",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Cross-company risk-factor reading comprehension question focusing on liquidity and credit-related risks.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617141Z",
+    "curation_confidence": 0.82
+  },
+  {
+    "question_id": "P3V3-Q006",
+    "cik_int": [
+      890926,
+      1065280,
+      1141391
+    ],
+    "company_name": [
+      "RADIAN GROUP INC",
+      "NETFLIX INC",
+      "Mastercard Inc"
+    ],
+    "years": [
+      2009
+    ],
+    "question_text": "In their 2009 Form 10-K risk-factor disclosures, how do Radian Group, Netflix and Mastercard each describe their exposure to data protection, information security and customer privacy risks?",
+    "answer_type": "list",
+    "answer_text": [
+      "Radian Group warns that, despite believing it has appropriate information security, failures or breaches by employees or third parties could still occur and adversely affect the business.",
+      "Netflix emphasizes that privacy concerns and potential compromises of subscriber data could limit its ability to grow, damage its reputation and negatively affect its business.",
+      "Mastercard explicitly flags data protection and information security as a distinct risk area, underscoring the importance of safeguarding transaction and cardholder data in its network."
+    ],
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000890926_10-K_2009_section_1A_410",
+      "0001065280_10-K_2009_section_1A_235",
+      "0001141391_10-K_2009_section_1A_119"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_company",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Cross-company risk-factor question centered on data protection, information security and privacy risks.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617184Z",
+    "curation_confidence": 0.84
+  },
+  {
+    "question_id": "P3V3-Q007",
+    "cik_int": [
+      1276520
+    ],
+    "company_name": [
+      "GENWORTH FINANCIAL INC"
+    ],
+    "years": [
+      2019,
+      2022
+    ],
+    "question_text": "Comparing its 2019 and 2022 Form 10-K risk-factor discussions, how does GENWORTH FINANCIAL INC describe the role of regulatory capital and ratings requirements in shaping its mortgage insurance and broader business risks?",
+    "answer_type": "span",
+    "answer_text": "Across these filings Genworth portrays capital and ratings requirements as a core constraint on its mortgage insurance franchise and overall business. In 2019 it emphasizes that adverse changes in risk-based capital measures, PMIERs or other regulatory capital rules could trigger downgrades, restrict its ability to write or retain business and prompt supervisory actions, all of which would materially affect results and financial condition. By 2022 it continues to highlight that compliance with evolving capital standards and rating-agency expectations remains critical to market access and funding flexibility, underscoring that any deterioration could impair growth, increase funding costs or limit strategic options.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001276520_10-K_2019_section_1A_299",
+      "0001276520_10-K_2022_section_1_716"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_year",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1",
+      "ITEM_1A"
+    ],
+    "notes": "Cross-year linkage between capital/rating requirements and risk profile, focusing on U.S. mortgage insurance and broader regulatory/cyber guidance context.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617229Z",
+    "curation_confidence": 0.8
+  },
+  {
+    "question_id": "P3V3-Q008",
+    "cik_int": [
+      200406
+    ],
+    "company_name": [
+      "JOHNSON & JOHNSON"
+    ],
+    "years": [
+      2021,
+      2022
+    ],
+    "question_text": "How does Johnson & Johnson describe the uncertainties and execution risks surrounding its COVID-19 vaccine programs in its 2021 and 2022 Form 10-K risk-factor discussions?",
+    "answer_type": "span",
+    "answer_text": "Johnson & Johnson frames its COVID-19 vaccine work as subject to significant regulatory, scientific and operational uncertainty. In 2021 it stresses that development may not be successful or commercially viable, that trial data could be interpreted differently by regulators and the scientific community, and that it faces risks around raw-material availability, manufacturing scale-up, logistics and demand. In 2022 it continues to highlight similar themes, noting that ongoing development and real-world data may affect perceptions of efficacy, safety and durability, that competition from other vaccines and shifting demand could reduce the opportunity, and that pricing, access and cost recovery for R&D and manufacturing all present additional risks.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000200406_10-K_2021_section_1A_46",
+      "0000200406_10-K_2022_section_1A_47"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_year",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Narrative risk-factor comparison around COVID-19 vaccine development and commercialization risks.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617272Z",
+    "curation_confidence": 0.83
+  },
+  {
+    "question_id": "P3V3-Q009",
+    "cik_int": [
+      814585
+    ],
+    "company_name": [
+      "MBIA INC"
+    ],
+    "years": [
+      2011,
+      2013,
+      2016,
+      2018,
+      2020,
+      2022,
+      2023,
+      2024
+    ],
+    "question_text": "Across multiple Form 10-K filings from 2011 through 2024, how does MBIA INC organize and label its risk factors, and what does this reveal about the company\u2019s view of the main categories of risk it faces?",
+    "answer_type": "span",
+    "answer_text": "MBIA presents a consistent structure in how it organizes and labels risk factors over time. In earlier filings it groups them into categories such as Insured Portfolio Loss Related Risk Factors, Legal, Regulatory and Other Risk Factors, Capital, Liquidity and Market Related Risk Factors and MBIA Corp. Risk Factors, generally listing items in order of significance within each category. In later years it refines these headings slightly, adding or separating General Risk Factors or Strategic Plan Related Risk Factors, but continues to emphasize the same core themes: credit performance of the insured portfolio, legal and regulatory challenges, capital and liquidity constraints and company-specific execution risks. The stable categorization underscores that these remain the primary lenses through which the company views its risk profile.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000814585_10-K_2011_section_1A_59",
+      "0000814585_10-K_2013_section_1A_3",
+      "0000814585_10-K_2016_section_1A_3",
+      "0000814585_10-K_2018_section_1A_3",
+      "0000814585_10-K_2019_section_1A_3",
+      "0000814585_10-K_2020_section_1A_2",
+      "0000814585_10-K_2021_section_1A_3",
+      "0000814585_10-K_2022_section_1A_2",
+      "0000814585_10-K_2023_section_1A_2",
+      "0000814585_10-K_2024_section_1A_2"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_year",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Longitudinal risk-factor taxonomy question focusing on MBIA's grouping and labeling of risk categories.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617314Z",
+    "curation_confidence": 0.81
+  },
+  {
+    "question_id": "P3V3-Q010",
+    "cik_int": [
+      890926,
+      1276520,
+      1403161,
+      1141391,
+      1326801,
+      1652044,
+      1018724,
+      1318605,
+      1273813,
+      909832,
+      34088,
+      104169
+    ],
+    "company_name": [
+      "RADIAN GROUP INC",
+      "GENWORTH FINANCIAL INC",
+      "VISA INC.",
+      "Mastercard Inc",
+      "Meta Platforms, Inc.",
+      "Alphabet Inc.",
+      "AMAZON COM INC",
+      "Tesla, Inc.",
+      "ASSURED GUARANTY LTD",
+      "COSTCO WHOLESALE CORP /NEW",
+      "EXXON MOBIL CORP",
+      "Walmart Inc."
+    ],
+    "years": [
+      2006,
+      2009,
+      2010,
+      2011,
+      2013,
+      2015,
+      2016,
+      2017,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "question_text": "Drawing on a cross-company sample of filings, how do large public issuers describe their exposure to regulatory, legal and policy risks across areas such as insurance regulation, payment network rules, cybersecurity disclosure, FX and market risk, environmental rules, and emerging digital and AI regulation?",
+    "answer_type": "span",
+    "answer_text": "Across this diverse group of issuers, regulatory, legal and policy risk is portrayed as both pervasive and highly specific to each sector. Mortgage and insurance groups like Radian and Genworth emphasize capital, reserve and housing-finance rules, warning that changes in PMIERs, RBC or other insurance standards, as well as actions by state and federal regulators, could restrict their ability to write business or trigger supervisory intervention. Payments networks such as Visa and Mastercard focus on interchange and routing rules, government and central bank oversight, and the risk that new regulations or competition-driven mandates could pressure pricing, volumes or required on-shore processing. Technology and platform companies, including Meta, Alphabet and Amazon, highlight cybersecurity disclosure obligations, data privacy and content-moderation regimes, and increasingly, AI- and DMA-style frameworks that may impose new compliance burdens, fines or constraints on how their services operate. Industrial and energy names like Tesla, ExxonMobil and others point to environmental, climate and product-compliance rules and the role of regulatory credits. Collectively, the disclosures show that evolving regulation can affect everything from capital and liquidity to product design, data use, transaction routing and market access, with many companies explicitly tying these risks to potential impacts on growth, profitability and strategic flexibility.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000890926_10-K_2009_section_1_862",
+      "0000890926_10-K_2015_section_1A_322",
+      "0000890926_10-K_2017_section_8_1125",
+      "0000890926_10-K_2019_section_1A_349",
+      "0000890926_10-K_2023_section_8_67",
+      "0001276520_10-K_2016_section_8_564",
+      "0001276520_10-K_2017_section_1A_435",
+      "0001276520_10-K_2019_section_1A_9",
+      "0001276520_10-K_2020_section_7_574",
+      "0001276520_10-K_2020_section_7_80",
+      "0001276520_10-K_2022_section_1_716",
+      "0001403161_10-K_2019_section_7_324",
+      "0001403161_10-K_2020_section_1A_71",
+      "0001403161_10-K_2020_section_7_218",
+      "0001403161_10-K_2023_section_1_249",
+      "0001403161_10-K_2024_section_1A_97",
+      "0001403161_10-K_2024_section_7_24",
+      "0001141391_10-K_2011_section_1A_91",
+      "0001141391_10-K_2010_section_8_959",
+      "0001141391_10-K_2021_section_1A_24",
+      "0001141391_10-K_2021_section_8_1072",
+      "0001141391_10-K_2022_section_8_1072",
+      "0001326801_10-K_2023_section_1A_464",
+      "0001326801_10-K_2024_section_1_145",
+      "0001652044_10-K_2021_section_1A_80",
+      "0001652044_10-K_2021_section_7_134",
+      "0001652044_10-K_2022_section_7A_0",
+      "0001652044_10-K_2023_section_7A_5",
+      "0001018724_10-K_2019_section_8_231",
+      "0001018724_10-K_2020_section_8_123",
+      "0001318605_10-K_2014_section_8_70",
+      "0001318605_10-K_2017_section_1_185",
+      "0001318605_10-K_2019_section_7_318",
+      "0001318605_10-K_2024_section_8_664",
+      "0001273813_10-K_2015_section_10_2",
+      "0001273813_10-K_2016_section_8_1210",
+      "0001273813_10-K_2019_section_1A_179",
+      "0001273813_10-K_2020_section_7A_68",
+      "0001273813_10-K_2023_section_1A_193",
+      "0000909832_10-K_2013_section_1A_157",
+      "0000909832_10-K_2020_section_1A_171",
+      "0000909832_10-K_2021_section_1A_173",
+      "0000909832_10-K_2025_section_1A_36",
+      "0000034088_10-K_2023_section_2_8",
+      "0000104169_10-K_2022_section_7_31",
+      "0000104169_10-K_2023_section_8_165"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_company",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1",
+      "ITEM_1A",
+      "ITEM_7",
+      "ITEM_7A",
+      "ITEM_8",
+      "ITEM_10"
+    ],
+    "notes": "High-level synthetic cross-company narrative about regulatory, legal and policy risk, spanning multiple sectors and time periods.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617360Z",
+    "curation_confidence": 0.79
+  }
+]

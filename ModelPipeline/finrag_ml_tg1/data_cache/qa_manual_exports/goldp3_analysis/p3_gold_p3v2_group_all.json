@@ -1,0 +1,679 @@
+[
+  {
+    "question_id": "P3V2-Q001",
+    "cik_int": [
+      34088
+    ],
+    "company_name": [
+      "EXXON MOBIL CORP"
+    ],
+    "years": [
+      2008
+    ],
+    "question_text": "What does EXXON MOBIL CORP report as its total revenue in 2008, and how is this figure described in the filing?",
+    "answer_type": "span",
+    "answer_text": "Reference is made to the following in the Financial Section of this report: \u2022 Consolidated financial statements, together with the report thereon of PricewaterhouseCoopers LLP dated February 27, 2009, beginning with the section entitled \u201cReport of Independent Registered Public Accounting Firm\u201d and continuing through \u201cNote 18: Income, Sales-Based and Other Taxes\u201d; \u2022 \u201cQuarterly Information\u201d (unaudited); \u2022 \u201cSupplemental Information on Oil and Gas Exploration and Production Activities\u201d (unaudited); and \u2022 \u201cFrequently Used Terms\u201d (unaudited).",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000034088_10-K_2008_section_8_2"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7",
+      "ITEM_8"
+    ],
+    "notes": "Numeric KPI-based narrative for total revenue.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q002",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2006
+    ],
+    "question_text": "What does ELI LILLY & Co report as its net income in 2006, and how is this figure described in the filing?",
+    "answer_type": "span",
+    "answer_text": "A 5 percent change in the valuation allowance would result in a change in net income of approximately $25 million.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2006_section_7_326"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7",
+      "ITEM_8"
+    ],
+    "notes": "Numeric KPI-based narrative for net income.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q003",
+    "cik_int": [
+      104169
+    ],
+    "company_name": [
+      "Walmart Inc."
+    ],
+    "years": [
+      2018
+    ],
+    "question_text": "What does Walmart Inc. report as its operating income in 2018, and how is this figure described in the filing?",
+    "answer_type": "span",
+    "answer_text": "As a result of the factors discussed above, segment operating income decreased $689 million and $149 million for fiscal 2018 and 2017, respectively.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000104169_10-K_2018_section_7_191"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7",
+      "ITEM_8"
+    ],
+    "notes": "Numeric KPI-based narrative for operating income.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q004",
+    "cik_int": [
+      200406
+    ],
+    "company_name": [
+      "JOHNSON & JOHNSON"
+    ],
+    "years": [
+      2016
+    ],
+    "question_text": "What does JOHNSON & JOHNSON report as its cash flow from operations in 2016, and how is this figure described in the filing?",
+    "answer_type": "span",
+    "answer_text": "Report of Independent Registered Public Accounting Firm To the Shareholders and Board of Directors of Johnson & Johnson In our opinion, the accompanying consolidated balance sheets and the related consolidated statements of earnings, statements of comprehensive income, statements of equity, and statements of cash flows present fairly, in all material respects, the financial position of Johnson & Johnson and its subsidiaries at January 3, 2016 and December 28, 2014, and the results of their operations and their cash flows for each of the three years in the period ended January 3, 2016 in conformity with accounting principles generally accepted in the United States of America.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000200406_10-K_2016_section_8_945"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7",
+      "ITEM_8"
+    ],
+    "notes": "Numeric KPI-based narrative for cash flow from operations.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q005",
+    "cik_int": [
+      320193
+    ],
+    "company_name": [
+      "Apple Inc."
+    ],
+    "years": [
+      2006
+    ],
+    "question_text": "What does Apple Inc. report as its earnings per share in 2006, and how is this figure described in the filing?",
+    "answer_type": "span",
+    "answer_text": "The following table sets forth the computation of basic and diluted earnings per share: Potentially dilutive securities representing approximately 3.9 million, 12.7 million (as restated(1)), and 8.9 million (as restated(1)) shares of common stock for the years ended September 30, 2006, September 24, 2005, and September 25, 2004, respectively, were excluded from the computation of diluted earnings per share for these periods because their effect would have been antidilutive.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000320193_10-K_2006_section_8_174"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7",
+      "ITEM_8"
+    ],
+    "notes": "Numeric KPI-based narrative for earnings per share.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V2-Q006",
+    "cik_int": [
+      789019
+    ],
+    "company_name": [
+      "MICROSOFT CORP"
+    ],
+    "years": [
+      2017
+    ],
+    "question_text": "How does MICROSOFT CORP describe the change in its Intelligent Cloud revenue in 2017, including both the direction and magnitude of the change?",
+    "answer_type": "span",
+    "answer_text": "Intelligent Cloud Revenue increased $2.4 billion or 10%, primarily due to higher revenue from server products and cloud services.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000789019_10-K_2017_section_7_104"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "Cross-year style narrative about segment revenue change.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.8
+  },
+  {
+    "question_id": "P3V2-Q007",
+    "cik_int": [
+      1276520
+    ],
+    "company_name": [
+      "GENWORTH FINANCIAL INC"
+    ],
+    "years": [
+      2019
+    ],
+    "question_text": "What regulatory and compliance risks does GENWORTH FINANCIAL INC highlight in its 2019 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "There are numerous risks related to the transaction, including the following: \u2022 the risk that the parties will not be able to obtain the required regulatory re-approvals, clearances or extensions, or the possibility that such regulatory re-approvals or clearances may further delay the transaction or may not be received prior to March 31, 2020 (and either or both of the parties may not be willing to further waive their end date termination rights beyond March 31, 2020) or that materially burdensome or adverse regulatory conditions may be imposed or undesirable measures may be required in connection with any such regulatory re-approvals, clearances or extensions (including those conditions or measures that either or both of the parties may be unwilling to accept or undertake, as applicable); \u2022 with continuing delays, circumstances may arise that make one or both parties unwilling to proceed with the transaction or unable to comply with the conditions to existing regulatory approvals or one or both of the parties may be unwilling to accept any new condition under a regulatory re-approval; \u2022 the risk that the parties will not be able to obtain other regulatory approvals, re-approvals, clearances or extensions, including in connection with a potential alternative funding structure or the current geo-political environment; \u2022 one or more regulators may rescind or fail to extend existing approvals, or that the revocation by one regulator of approvals will lead to the revocation of approvals by other regulators; \u2022 the parties\u2019 inability to obtain any necessary regulatory approvals, clearances or extensions for the post-closing capital plan; \u2022 the risk that a condition to closing the transaction may not be satisfied or that a condition to closing that is currently satisfied may not remain satisfied due to the delay in closing the transaction; \u2022 existing and potential legal proceedings may be instituted against us in connection with the transaction that may delay the transaction, make it more costly or ultimately preclude it; \u2022 the risk that the proposed transaction disrupts Genworth\u2019s current plans and operations as a result of the announcement and consummation of the transaction; \u2022 certain restrictions during the pendency of the transaction that may impact Genworth\u2019s ability to pursue certain business opportunities or strategic transactions; \u2022 continued availability of capital and financing to Genworth before, or in the absence of, the consummation of the transaction; \u2022 further rating agency actions and downgrades in Genworth\u2019s credit or financial strength ratings; \u2022 changes in applicable laws or regulations; \u2022 our ability to recognize the anticipated benefits of the transaction; \u2022 the amount of the costs, fees, expenses and other charges related to the transaction, including costs and expenses related to conditions imposed in connection with regulatory approvals, re-approvals or clearances, which may be material; \u2022 the risks related to diverting management\u2019s attention from our ongoing business operations; \u2022 our ability to attract, recruit, retain and motivate current and prospective employees may be adversely affected; and \u2022 disruptions and uncertainty relating to the transaction, whether or not it is completed, may harm our relationships with our employees, customers, distributors, vendors or other business partners, and may result in a negative impact on our business.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001276520_10-K_2019_section_1A_9"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=regulatory with risk_cue_count=14.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.8
+  },
+  {
+    "question_id": "P3V2-Q008",
+    "cik_int": [
+      1276520
+    ],
+    "company_name": [
+      "GENWORTH FINANCIAL INC"
+    ],
+    "years": [
+      2018
+    ],
+    "question_text": "What regulatory and compliance risks does GENWORTH FINANCIAL INC highlight in its 2018 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "There are numerous risks related to the transaction, including the following: \u2022 the risk that the parties will not be able to obtain the required regulatory approvals or clearance or that the regulatory process may further delay the transaction beyond March 15, 2019 (and either or both of the parties may not be willing to further waive their end date termination rights beyond March 15, 2019) or that materially burdensome or adverse regulatory conditions may be imposed or undesirable measures may be required in connection with any such regulatory approvals or clearances (including those conditions or measures that either or both of the parties may be unwilling to accept or undertake, as applicable); \u2022 the risk that the parties will not be able to obtain other regulatory approvals, including in connection with a potential alternative funding structure or the current geo-political environment; \u2022 the parties\u2019 inability to obtain any necessary regulatory approvals or clearances for the post-closing capital plan; \u2022 the risk that a closing condition of the transaction may not be satisfied; \u2022 existing and potential legal proceedings may be instituted against us that may delay the transaction, make it more costly or ultimately preclude it; \u2022 the risk that the proposed transaction disrupts Genworth\u2019s current plans and operations as a result of the announcement and consummation of the transaction; \u2022 certain restrictions during the pendency of the transaction that may impact Genworth\u2019s ability to pursue certain business opportunities or strategic transactions; \u2022 continued availability of capital and financing to Genworth before, or in the absence of, the consummation of the transaction; \u2022 further rating agency actions and downgrades in Genworth\u2019s debt or financial strength ratings; \u2022 changes in applicable laws or regulations; \u2022 our ability to recognize the anticipated benefits of the transaction; \u2022 the amount of the costs, fees, expenses and other charges related to the transaction, including costs and expenses related to conditions imposed in connection with regulatory approvals, which may be material; \u2022 the risks related to diverting management\u2019s attention from our ongoing business operations; \u2022 the Merger Agreement may be terminated in circumstances that would require us to pay China Oceanwide a fee; \u2022 our ability to attract, recruit, retain and motivate current and prospective employees may be adversely affected; and \u2022 disruptions and uncertainty relating to the transaction, whether or not it is completed, may harm our relationships with our employees, customers, distributors, vendors or other business partners, and may result in a negative impact on our business.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001276520_10-K_2018_section_1A_10"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=regulatory with risk_cue_count=12.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.8
+  },
+  {
+    "question_id": "P3V2-Q009",
+    "cik_int": [
+      200406
+    ],
+    "company_name": [
+      "JOHNSON & JOHNSON"
+    ],
+    "years": [
+      2021
+    ],
+    "question_text": "What regulatory and compliance risks does JOHNSON & JOHNSON highlight in its 2021 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "We also face uncertainties related to our efforts to develop a COVID-19 vaccine candidate, including uncertainties related to the risk that our development programs may not be successful, commercially viable or receive approval or Emergency Use Authorization from regulatory authorities; risks associated with clinical trial data, including further analyses of existing preclinical or clinical trial data that may be inconsistent with the data used for selection of the JNJ-78436735 vaccine candidate and dose level for the Phase 3 (ENSEMBLE) trial; the risk that clinical trial data are subject to differing interpretations and assessments, including during the peer review/publication process, in the scientific community generally, and by regulatory authorities; disruptions in the relationships between us, our third-party suppliers and external manufacturers; the risk that other companies may produce superior or competitive products; the risk that demand for any products we may develop may no longer exist; risks related to the availability of raw materials to manufacture any such products; the risk that we may not be able to recoup costs associated with our R&D and manufacturing efforts and risks associated with any changes in the way we approach or provide additional research funding for potential drug development related to COVID-19; the risk that we may not be able to create or scale up manufacturing capacity on a timely basis, that we may experience manufacturing delays once a manufacturing site is activated, or have access to logistics or supply channels commensurate with global demand for any potential approved vaccine or product candidate, which would negatively impact our ability to supply the estimated numbers of doses of our vaccine candidate within the projected time periods indicated, and other challenges and risks associated with the pace of our vaccine development program; and pricing and access challenges for such products, including in the U.S.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000200406_10-K_2021_section_1A_46"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=regulatory with risk_cue_count=8.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.8
+  },
+  {
+    "question_id": "P3V2-Q010",
+    "cik_int": [
+      814585
+    ],
+    "company_name": [
+      "MBIA INC"
+    ],
+    "years": [
+      2013
+    ],
+    "question_text": "What liquidity, funding, or credit risks does MBIA INC highlight in its 2013 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "Our risk factors are grouped into categories and are presented in the following order: \u201cInsured Portfolio Loss Related Risk Factors\u201d, \u201cCapital, Liquidity and Market Related Risk Factors\u201d, \u201cStrategic Plan Related Risk Factors\u201d and \u201cGeneral Risk Factors.\u201d Risk factors are listed in order of significance within each category.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000814585_10-K_2013_section_1A_3"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=liquidity_credit with risk_cue_count=7.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.75
+  },
+  {
+    "question_id": "P3V2-Q011",
+    "cik_int": [
+      814585
+    ],
+    "company_name": [
+      "MBIA INC"
+    ],
+    "years": [
+      2016
+    ],
+    "question_text": "What liquidity, funding, or credit risks does MBIA INC highlight in its 2016 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "Our risk factors are grouped into categories and are presented in the following order: \u201cInsured Portfolio Loss Related Risk Factors\u201d, \u201cStrategic Plan Related and Other Risk Factors\u201d, \u201cCapital, Liquidity and Market Related Risk Factors\u201d and \u201cMBIA Corp. Risk Factors.\u201d Risk factors are listed in order of significance within each category.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000814585_10-K_2016_section_1A_3"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=liquidity_credit with risk_cue_count=7.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.75
+  },
+  {
+    "question_id": "P3V2-Q012",
+    "cik_int": [
+      814585
+    ],
+    "company_name": [
+      "MBIA INC"
+    ],
+    "years": [
+      2009
+    ],
+    "question_text": "What liquidity, funding, or credit risks does MBIA INC highlight in its 2009 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "Liquidity and Market Related Risk Factors Adverse developments in the credit markets may materially and adversely affect our ability to meet liquidity needs As a financial services company, we are particularly sensitive to liquidity risk, which is the probability that an enterprise will not have sufficient resources to meet contractual payment obligations when due.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000814585_10-K_2009_section_1A_97"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=liquidity_credit with risk_cue_count=6.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.75
+  },
+  {
+    "question_id": "P3V2-Q013",
+    "cik_int": [
+      104169
+    ],
+    "company_name": [
+      "Walmart Inc."
+    ],
+    "years": [
+      2011
+    ],
+    "question_text": "What operational or supply chain risks does Walmart Inc. highlight in its 2011 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "Such events could result in physical damage to, or the complete loss of, one or more of our properties, the closure of one or more stores, clubs and distribution centers, the lack of an adequate work force in a market, the inability of customers and our associates to reach or have transportation to our stores and clubs directly affected by such events, the evacuation of the populace from areas in which our stores, clubs and distributions centers are located, changes in the purchasing patterns of consumers and in consumers\u2019 disposable income, the temporary or long-term disruption in the supply of products from some local and overseas suppliers, the disruption in the transport of goods from overseas, the disruption or delay in the delivery of goods to our distribution centers or stores within a country in which we are operating, the reduction in the availability of products in our stores, the disruption of utility services to our stores and our facilities, and disruption in our communications with our stores.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000104169_10-K_2011_section_1A_72"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=operational_supply_chain with risk_cue_count=5.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.75
+  },
+  {
+    "question_id": "P3V2-Q014",
+    "cik_int": [
+      104169
+    ],
+    "company_name": [
+      "Walmart Inc."
+    ],
+    "years": [
+      2021
+    ],
+    "question_text": "What operational or supply chain risks does Walmart Inc. highlight in its 2021 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "Such events could result in physical damage to, or the complete loss of, one or more of our properties, the closure of one or more stores, clubs and distribution or fulfillment centers, limitations on store or club operating hours, the lack of an adequate work force in a market, the inability of customers and associates to reach or have transportation to our stores and clubs affected by such events, the evacuation of the populace from areas in which our stores, clubs and distribution and fulfillment centers are located, the unavailability of our digital platforms to our customers, changes in the purchasing patterns of consumers (including the frequency of visits by consumers to physical retail locations, whether as a result of limitations on large gatherings, travel and movement limitations or otherwise) and in consumers' disposable income, the temporary or long-term disruption in the supply of products from some suppliers, the disruption in the transport of goods from overseas, the disruption or delay in the delivery of goods to our distribution and fulfillment centers or stores within a country in which we are operating, the reduction in the availability of products in our stores, the disruption of utility services to our stores and our facilities, and the disruption in our communications with our stores.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000104169_10-K_2021_section_1A_47"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=operational_supply_chain with risk_cue_count=5.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.75
+  },
+  {
+    "question_id": "P3V2-Q015",
+    "cik_int": [
+      104169
+    ],
+    "company_name": [
+      "Walmart Inc."
+    ],
+    "years": [
+      2021
+    ],
+    "question_text": "What market or competitive risks does Walmart Inc. highlight in its 2021 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "Other factors and uncertainties include, but are not limited to: the severity and duration of the pandemic, including whether there are additional outbreaks or spikes in the number of COVID-19 cases, future mutations or related strains of the virus in areas in which we operate; further increased operational costs associated with operating during a global pandemic; evolving macroeconomic factors, including general economic uncertainty, unemployment rates, and recessionary pressures; unknown consequences on our business performance and initiatives stemming from the substantial investment of time, capital and other resources to the pandemic response; the availability of, and prevalence of access to, effective medical treatments and vaccines for COVID-19; the pace of recovery when the pandemic subsides; and the long-term impact of the COVID-19 pandemic on our business, including consumer behaviors.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000104169_10-K_2021_section_1A_39"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=market_competitive with risk_cue_count=5.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.8
+  },
+  {
+    "question_id": "P3V2-Q016",
+    "cik_int": [
+      104169
+    ],
+    "company_name": [
+      "Walmart Inc."
+    ],
+    "years": [
+      2022
+    ],
+    "question_text": "What market or competitive risks does Walmart Inc. highlight in its 2022 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "Other factors and uncertainties include, but are not limited to: the severity and duration of the pandemic, including whether there are additional outbreaks or spikes in the number of COVID-19 cases, future mutations or related strains of the virus in areas in which we and our suppliers operate; further increased operational costs associated with operating during a global pandemic; evolving macroeconomic factors, including general economic uncertainty, unemployment rates, and recessionary pressures; unknown consequences on our business performance and initiatives stemming from the substantial investment of time, capital and other resources to the pandemic response; the effectiveness and extent of administration of vaccinations and medical treatments for COVID-19 or other variants; the pace of recovery when the pandemic subsides; and the long-term impact of the COVID-19 pandemic on our business, including consumer behaviors.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000104169_10-K_2022_section_1A_43"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=market_competitive with risk_cue_count=5.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.8
+  },
+  {
+    "question_id": "P3V2-Q017",
+    "cik_int": [
+      1326801
+    ],
+    "company_name": [
+      "Meta Platforms, Inc."
+    ],
+    "years": [
+      2023
+    ],
+    "question_text": "What cybersecurity or data security risks does Meta Platforms, Inc. highlight in its 2023 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "Although we have developed systems and processes that are designed to protect our data and user data, to reduce the risk of data loss or misuse, to disable undesirable accounts and activities on our platform, and to reduce the risk of or detect security breaches, such measures will not provide absolute security, and we cannot assure you that we will be able to react in a timely manner to any cyber-attacks or other security incidents, or that our remediation efforts will be successful.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001326801_10-K_2023_section_1A_715"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=cybersecurity_tech with risk_cue_count=6.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.75
+  },
+  {
+    "question_id": "P3V2-Q018",
+    "cik_int": [
+      1326801
+    ],
+    "company_name": [
+      "Meta Platforms, Inc."
+    ],
+    "years": [
+      2024
+    ],
+    "question_text": "What cybersecurity or data security risks does Meta Platforms, Inc. highlight in its 2024 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "Although we have developed systems and processes that are designed to protect our data and user data, to reduce the risk of data loss or misuse, to disable undesirable accounts and activities on our platform, and to reduce the risk of or detect security breaches, such measures will not provide absolute security, and we cannot assure you that we will be able to react in a timely manner to any cyber-attacks or other security incidents, or that our remediation efforts will be successful.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001326801_10-K_2024_section_1A_731"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=cybersecurity_tech with risk_cue_count=6.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.75
+  },
+  {
+    "question_id": "P3V2-Q019",
+    "cik_int": [
+      1403161
+    ],
+    "company_name": [
+      "VISA INC."
+    ],
+    "years": [
+      2008
+    ],
+    "question_text": "What legal, IP, or litigation risks does VISA INC. highlight in its 2008 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "Although our retrospective responsibility plan is intended to address potential monetary liabilities arising from the covered litigation as described in Note 5-Retrospective Responsibility Plan and Note 23-Legal Matters to our consolidated financial statements included in Item 8 in this report, the plan does not cover other litigation that we currently face, and will not cover litigation, including state court litigation, that we may face in the future, except for cases that include claims for damages relating to the period prior to our initial public offering that are transferred for pre-trial proceedings or otherwise included in the interchange litigation.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001403161_10-K_2008_section_1A_91"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=legal_ip_litigation with risk_cue_count=5.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.75
+  },
+  {
+    "question_id": "P3V2-Q020",
+    "cik_int": [
+      320193
+    ],
+    "company_name": [
+      "Apple Inc."
+    ],
+    "years": [
+      2014
+    ],
+    "question_text": "What legal, IP, or litigation risks does Apple Inc. highlight in its 2014 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "Moreover, if a computer security breach affects the Company\u2019s systems or results in the unauthorized release of PII, the Company\u2019s reputation and brand could be materially damaged, use of the Company\u2019s products and services could decrease, and the Company could be exposed to a risk of loss or litigation and possible liability.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000320193_10-K_2014_section_1A_193"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=legal_ip_litigation with risk_cue_count=4.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.75
+  },
+  {
+    "question_id": "P3V2-Q021",
+    "cik_int": [
+      789019
+    ],
+    "company_name": [
+      "MICROSOFT CORP"
+    ],
+    "years": [
+      2012
+    ],
+    "question_text": "What general business risk risks does MICROSOFT CORP highlight in its 2012 Risk Factors section?",
+    "answer_type": "span",
+    "answer_text": "These include: \u2022 engineering more secure products and services; \u2022 enhancing security and reliability features in our products and services, and continuously evaluating and updating those security and reliability features; \u2022 improving the deployment of software updates to address security vulnerabilities; \u2022 investing in mitigation technologies that help to secure customers from attacks even when such software updates are not deployed; \u2022 protecting the digital security infrastructure that ensures the integrity of our products and services; \u2022 helping our customers make the best use of our products and services to protect against computer viruses and other attacks; and \u2022 providing customers online automated security tools, published security guidance, and security software such as firewalls and anti-virus software.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000789019_10-K_2012_section_1A_101"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Selected from risk_topic=general_risk with risk_cue_count=7.",
+    "gold_version": "P3.v2",
+    "created_by": "joel_curator",
+    "created_at": "2025-11-13T19:59:01.521911Z",
+    "curation_confidence": 0.8
+  }
+]

@@ -1,0 +1,908 @@
+[
+  {
+    "question_id": "9ab643b3-1574-49db-baf6-57af0b7e79cf",
+    "cik_int": [
+      34088
+    ],
+    "company_name": [
+      "EXXON MOBIL CORP"
+    ],
+    "years": [
+      2008
+    ],
+    "question_text": "What was EXXON MOBIL CORP's total revenue in 2008?",
+    "answer_type": "numeric",
+    "answer_text": "27.0",
+    "answer_numeric": 27.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000034088_10-K_2008_section_8_2"
+    ],
+    "evidence_spans": [
+      "27,"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for revenue. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "906661d1-d906-4689-9eeb-8e4b7d309960",
+    "cik_int": [
+      34088
+    ],
+    "company_name": [
+      "EXXON MOBIL CORP"
+    ],
+    "years": [
+      2014
+    ],
+    "question_text": "What was EXXON MOBIL CORP's total revenue in 2014?",
+    "answer_type": "numeric",
+    "answer_text": "25.0",
+    "answer_numeric": 25.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000034088_10-K_2014_section_8_1"
+    ],
+    "evidence_spans": [
+      "25,"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for revenue. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "c2ac3bbf-aff3-41ea-8897-9740c7d73b4c",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2006
+    ],
+    "question_text": "What was ELI LILLY & Co's total revenue in 2006?",
+    "answer_type": "numeric",
+    "answer_text": "2005.0",
+    "answer_numeric": 2005.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2006_section_7_265"
+    ],
+    "evidence_spans": [
+      "2005,"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for revenue. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "4c113b17-f31f-4f08-a350-6e47c02001fa",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2006
+    ],
+    "question_text": "What was ELI LILLY & Co's net income in 2006?",
+    "answer_type": "numeric",
+    "answer_text": "5.0",
+    "answer_numeric": 5.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2006_section_7_326"
+    ],
+    "evidence_spans": [
+      "5"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for net_income. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "87c09f0e-7654-4b8d-b195-ff6de5a4d2c3",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2007
+    ],
+    "question_text": "What was ELI LILLY & Co's total revenue in 2007?",
+    "answer_type": "numeric",
+    "answer_text": "28.0",
+    "answer_numeric": 28.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2007_section_7_92"
+    ],
+    "evidence_spans": [
+      "28"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for revenue. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "2c86aafa-3eaa-44dd-8395-47976dc158fc",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2007
+    ],
+    "question_text": "What was ELI LILLY & Co's net income in 2007?",
+    "answer_type": "numeric",
+    "answer_text": "2.66",
+    "answer_numeric": 2.66,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2007_section_7_133"
+    ],
+    "evidence_spans": [
+      "$2.66"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for net_income. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "a313a740-1d71-45c1-a467-08d4a8494e65",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2008
+    ],
+    "question_text": "What was ELI LILLY & Co's total revenue in 2008?",
+    "answer_type": "numeric",
+    "answer_text": "2008.0",
+    "answer_numeric": 2008.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2008_section_8_322"
+    ],
+    "evidence_spans": [
+      "2008,"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for revenue. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "00765d33-72e0-432c-bd5b-1f59e2eabb99",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2008
+    ],
+    "question_text": "What was ELI LILLY & Co's net income in 2008?",
+    "answer_type": "numeric",
+    "answer_text": "4.69",
+    "answer_numeric": 4.69,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2008_section_8_27"
+    ],
+    "evidence_spans": [
+      "$4.69"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for net_income. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "1979f3bd-9722-4c82-9d41-4d449a23d01f",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2009
+    ],
+    "question_text": "What was ELI LILLY & Co's total revenue in 2009?",
+    "answer_type": "numeric",
+    "answer_text": "11.0",
+    "answer_numeric": 11.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2009_section_7_149"
+    ],
+    "evidence_spans": [
+      "11"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for revenue. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "5e10e2ea-66ad-4eeb-80f0-04f55ca4d8f1",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2009
+    ],
+    "question_text": "What was ELI LILLY & Co's net income in 2009?",
+    "answer_type": "numeric",
+    "answer_text": "4.69",
+    "answer_numeric": 4.69,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2009_section_8_30"
+    ],
+    "evidence_spans": [
+      "$4.69"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for net_income. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "07248200-b451-46e9-a3e9-4d5bb8032d75",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2010
+    ],
+    "question_text": "What was ELI LILLY & Co's total revenue in 2010?",
+    "answer_type": "numeric",
+    "answer_text": "7.0",
+    "answer_numeric": 7.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2010_section_7_122"
+    ],
+    "evidence_spans": [
+      "7"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for revenue. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "9c489a2e-66a6-4895-9d6c-919340734188",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2010
+    ],
+    "question_text": "What was ELI LILLY & Co's net income in 2010?",
+    "answer_type": "numeric",
+    "answer_text": "2009.0",
+    "answer_numeric": 2009.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2010_section_7_185"
+    ],
+    "evidence_spans": [
+      "2009"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for net_income. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "952d8656-0372-4826-9abd-e6b0b8985238",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2011
+    ],
+    "question_text": "What was ELI LILLY & Co's total revenue in 2011?",
+    "answer_type": "numeric",
+    "answer_text": "1.0",
+    "answer_numeric": 1.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2011_section_7_93"
+    ],
+    "evidence_spans": [
+      "1"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for revenue. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "e0bc5324-beb9-41ab-903a-8eda2c74b25a",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2011
+    ],
+    "question_text": "What was ELI LILLY & Co's net income in 2011?",
+    "answer_type": "numeric",
+    "answer_text": "14.0",
+    "answer_numeric": 14.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2011_section_7_4"
+    ],
+    "evidence_spans": [
+      "14"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for net_income. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "2b44bf5d-4035-4e73-9449-a120e41fffdd",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2012
+    ],
+    "question_text": "What was ELI LILLY & Co's total revenue in 2012?",
+    "answer_type": "numeric",
+    "answer_text": "10.0",
+    "answer_numeric": 10.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2012_section_7_169"
+    ],
+    "evidence_spans": [
+      "10"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for revenue. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "ba0569b3-72dd-4c7d-9709-d68d5d5eb35a",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2012
+    ],
+    "question_text": "What was ELI LILLY & Co's net income in 2012?",
+    "answer_type": "numeric",
+    "answer_text": "6.0",
+    "answer_numeric": 6.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2012_section_7_4"
+    ],
+    "evidence_spans": [
+      "6"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for net_income. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "777d19aa-9897-4a19-8952-f09845036ecc",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2013
+    ],
+    "question_text": "What was ELI LILLY & Co's total revenue in 2013?",
+    "answer_type": "numeric",
+    "answer_text": "14.0",
+    "answer_numeric": 14.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2013_section_7_120"
+    ],
+    "evidence_spans": [
+      "14"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for revenue. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "d7c55ce0-6c3f-4ea7-801e-c848c2b40cda",
+    "cik_int": [
+      59478
+    ],
+    "company_name": [
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2013
+    ],
+    "question_text": "What was ELI LILLY & Co's net income in 2013?",
+    "answer_type": "numeric",
+    "answer_text": "6.0",
+    "answer_numeric": 6.0,
+    "answer_unit": null,
+    "tolerance": 0.01,
+    "evidence_sentence_ids": [
+      "0000059478_10-K_2013_section_7_157"
+    ],
+    "evidence_spans": [
+      "6"
+    ],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [],
+    "notes": "Auto-generated KPI question for net_income. Inspect sentence for units.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.6
+  },
+  {
+    "question_id": "71b1f236-a273-4b91-aedd-b442297d166c",
+    "cik_int": [
+      1276520
+    ],
+    "company_name": [
+      "GENWORTH FINANCIAL INC"
+    ],
+    "years": [
+      2019
+    ],
+    "question_text": "What key regulatory risks does GENWORTH FINANCIAL INC highlight in its Risk Factors?",
+    "answer_type": "span",
+    "answer_text": "There are numerous risks related to the transaction, including the following: \u2022 the risk that the parties will not be able to obtain the required regulatory re-approvals, clearances or extensions, or the possibility that such regulatory re-approvals or clearances may further delay the transaction or may not be received prior to March 31, 2020 (and either or both of the parties may not be willing to further waive their end date termination rights beyond March 31, 2020) or that materially burdensome or adverse regulatory conditions may be imposed or undesirable measures may be required in connection with any such regulatory re-approvals, clearances or extensions (including those conditions or measures that either or both of the parties may be unwilling to accept or undertake, as applicable); \u2022 with continuing delays, circumstances may arise that make one or both parties unwilling to proceed with the transaction or unable to comply with the conditions to existing regulatory approvals or one or both of the parties may be unwilling to accept any new condition under a regulatory re-approval; \u2022 the risk that the parties will not be able to obtain other regulatory approvals, re-approvals, clearances or extensions, including in connection with a potential alternative funding structure or the current geo-political environment; \u2022 one or more regulators may rescind or fail to extend existing approvals, or that the revocation by one regulator of approvals will lead to the revocation of approvals by other regulators; \u2022 the parties\u2019 inability to obtain any necessary regulatory approvals, clearances or extensions for the post-closing capital plan; \u2022 the risk that a condition to closing the transaction may not be satisfied or that a condition to closing that is currently satisfied may not remain satisfied due to the delay in closing the transaction; \u2022 existing and potential legal proceedings may be instituted against us in connection with the transaction that may delay the transaction, make it more costly or ultimately preclude it; \u2022 the risk that the proposed transaction disrupts Genworth\u2019s current plans and operations as a result of the announcement and consummation of the transaction; \u2022 certain restrictions during the pendency of the transaction that may impact Genworth\u2019s ability to pursue certain business opportunities or strategic transactions; \u2022 continued availability of capital and financing to Genworth before, or in the absence of, the consummation of the transaction; \u2022 further rating agency actions and downgrades in Genworth\u2019s credit or financial strength ratings; \u2022 changes in applicable laws or regulations; \u2022 our ability to recognize the anticipated benefits of the transaction; \u2022 the amount of the costs, fees, expenses and other charges related to the transaction, including costs and expenses related to conditions imposed in connection with regulatory approvals, re-approvals or clearances, which may be material; \u2022 the risks related to diverting management\u2019s attention from our ongoing business operations; \u2022 our ability to attract, recruit, retain and motivate current and prospective employees may be adversely affected; and \u2022 disruptions and uncertainty relating to the transaction, whether or not it is completed, may harm our relationships with our employees, customers, distributors, vendors or other business partners, and may result in a negative impact on our business.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001276520_10-K_2019_section_1A_9"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "Item 1A",
+      "Risk Factors"
+    ],
+    "notes": "Auto-generated risk QA from topic=regulatory, risk_cue_count=14.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.5
+  },
+  {
+    "question_id": "848369ef-3d9e-49f6-b4fa-96570a09ade0",
+    "cik_int": [
+      200406
+    ],
+    "company_name": [
+      "JOHNSON & JOHNSON"
+    ],
+    "years": [
+      2021
+    ],
+    "question_text": "What key regulatory risks does JOHNSON & JOHNSON highlight in its Risk Factors?",
+    "answer_type": "span",
+    "answer_text": "We also face uncertainties related to our efforts to develop a COVID-19 vaccine candidate, including uncertainties related to the risk that our development programs may not be successful, commercially viable or receive approval or Emergency Use Authorization from regulatory authorities; risks associated with clinical trial data, including further analyses of existing preclinical or clinical trial data that may be inconsistent with the data used for selection of the JNJ-78436735 vaccine candidate and dose level for the Phase 3 (ENSEMBLE) trial; the risk that clinical trial data are subject to differing interpretations and assessments, including during the peer review/publication process, in the scientific community generally, and by regulatory authorities; disruptions in the relationships between us, our third-party suppliers and external manufacturers; the risk that other companies may produce superior or competitive products; the risk that demand for any products we may develop may no longer exist; risks related to the availability of raw materials to manufacture any such products; the risk that we may not be able to recoup costs associated with our R&D and manufacturing efforts and risks associated with any changes in the way we approach or provide additional research funding for potential drug development related to COVID-19; the risk that we may not be able to create or scale up manufacturing capacity on a timely basis, that we may experience manufacturing delays once a manufacturing site is activated, or have access to logistics or supply channels commensurate with global demand for any potential approved vaccine or product candidate, which would negatively impact our ability to supply the estimated numbers of doses of our vaccine candidate within the projected time periods indicated, and other challenges and risks associated with the pace of our vaccine development program; and pricing and access challenges for such products, including in the U.S.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000200406_10-K_2021_section_1A_46"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "Item 1A",
+      "Risk Factors"
+    ],
+    "notes": "Auto-generated risk QA from topic=regulatory, risk_cue_count=8.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.5
+  },
+  {
+    "question_id": "1fa309a6-c6d0-414c-98bc-f139100ca337",
+    "cik_int": [
+      814585
+    ],
+    "company_name": [
+      "MBIA INC"
+    ],
+    "years": [
+      2017
+    ],
+    "question_text": "What key regulatory risks does MBIA INC highlight in its Risk Factors?",
+    "answer_type": "span",
+    "answer_text": "Our risk factors are grouped into categories and are presented in the following order: \u201cInsured Portfolio Loss Related Risk Factors\u201d, \u201cLegal, Regulatory and Other Risk Factors\u201d, \u201cCapital, Liquidity and Market Related Risk Factors\u201d and \u201cMBIA Corp. Risk Factors.\u201d Risk factors are generally listed in order of significance within each category.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000814585_10-K_2017_section_1A_3"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "Item 1A",
+      "Risk Factors"
+    ],
+    "notes": "Auto-generated risk QA from topic=regulatory, risk_cue_count=8.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.5
+  },
+  {
+    "question_id": "dd9f7bd3-b1cf-475b-b000-fed3552f7a88",
+    "cik_int": [
+      789019
+    ],
+    "company_name": [
+      "MICROSOFT CORP"
+    ],
+    "years": [
+      2012
+    ],
+    "question_text": "What major risks does MICROSOFT CORP highlight in its Risk Factors?",
+    "answer_type": "span",
+    "answer_text": "These include: \u2022 engineering more secure products and services; \u2022 enhancing security and reliability features in our products and services, and continuously evaluating and updating those security and reliability features; \u2022 improving the deployment of software updates to address security vulnerabilities; \u2022 investing in mitigation technologies that help to secure customers from attacks even when such software updates are not deployed; \u2022 protecting the digital security infrastructure that ensures the integrity of our products and services; \u2022 helping our customers make the best use of our products and services to protect against computer viruses and other attacks; and \u2022 providing customers online automated security tools, published security guidance, and security software such as firewalls and anti-virus software.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000789019_10-K_2012_section_1A_101"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "Item 1A",
+      "Risk Factors"
+    ],
+    "notes": "Auto-generated risk QA from topic=general_risk, risk_cue_count=7.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.5
+  },
+  {
+    "question_id": "f2ac1eae-f26b-45ca-93e1-87c093d3c8a1",
+    "cik_int": [
+      814585
+    ],
+    "company_name": [
+      "MBIA INC"
+    ],
+    "years": [
+      2013
+    ],
+    "question_text": "What liquidity or credit risks does MBIA INC highlight in its Risk Factors?",
+    "answer_type": "span",
+    "answer_text": "Our risk factors are grouped into categories and are presented in the following order: \u201cInsured Portfolio Loss Related Risk Factors\u201d, \u201cCapital, Liquidity and Market Related Risk Factors\u201d, \u201cStrategic Plan Related Risk Factors\u201d and \u201cGeneral Risk Factors.\u201d Risk factors are listed in order of significance within each category.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000814585_10-K_2013_section_1A_3"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "Item 1A",
+      "Risk Factors"
+    ],
+    "notes": "Auto-generated risk QA from topic=liquidity_credit, risk_cue_count=7.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.5
+  },
+  {
+    "question_id": "fb56e103-8a88-4bf5-8ae7-bf59c095a211",
+    "cik_int": [
+      890926
+    ],
+    "company_name": [
+      "RADIAN GROUP INC"
+    ],
+    "years": [
+      2015
+    ],
+    "question_text": "What key regulatory risks does RADIAN GROUP INC highlight in its Risk Factors?",
+    "answer_type": "span",
+    "answer_text": "Risk Factors ______________________________________________________________________________________________________ \u2022 Legislative reform of the U.S. housing finance system; \u2022 Legislation and regulation impacting the FHA and its competitive position versus private mortgage insurers; \u2022 State insurance laws and regulations that address, among other items, licensing of companies to transact business, claims handling, reinsurance requirements, premium rates, policy forms offered to customers and requirements for Risk-to-capital, minimum policyholder positions, reserves (including contingency reserves), surplus, reinsurance and payment of dividends; \u2022 The application of state, federal or private sector programs aimed at supporting borrowers and the housing market; \u2022 The application of RESPA, the FCRA and other laws to our businesses; \u2022 The amendments to Regulation AB (commonly referred to as Regulation AB II) that were adopted by the SEC in August 2014 to introduce several new requirements related to public offerings of ABS, including public offerings of RMBS for which our Services business traditionally has provided due diligence and servicer surveillance services and new credit rating agency reform rules (the \u201cNRSRO Rules\u201d) adopted by the SEC in August 2014, including new requirements applicable to providers of third-party due diligence services, such as our Services business, for both publicly and privately issued ABS; \u2022 The application of the TRID rules requiring enhanced disclosures to consumers in connection with the origination of residential mortgage loans, which may have an adverse effect on the residential mortgage market, including a negative impact on the volume of loans in the market; \u2022 New federal standards and oversight for mortgage insurers, including as a result of the Federal Insurance Office of the U.S. Treasury having published a study on how to modernize and improve the system of insurance regulation in the U.S. that, among other things, calls for federal standards and oversight for mortgage insurers to be developed and implemented.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000890926_10-K_2015_section_1A_322"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "Item 1A",
+      "Risk Factors"
+    ],
+    "notes": "Auto-generated risk QA from topic=regulatory, risk_cue_count=7.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.5
+  },
+  {
+    "question_id": "e2ffa6f7-86c4-48e3-afbb-f146a0a7293e",
+    "cik_int": [
+      1326801
+    ],
+    "company_name": [
+      "Meta Platforms, Inc."
+    ],
+    "years": [
+      2017
+    ],
+    "question_text": "What key regulatory risks does Meta Platforms, Inc. highlight in its Risk Factors?",
+    "answer_type": "span",
+    "answer_text": "Any number of factors could potentially negatively affect user retention, growth, and engagement, including if: \u2022 users increasingly engage with other competitive products or services; \u2022 we fail to introduce new features, products or services that users find engaging or if we introduce new products or services, or make changes to existing products and services, that are not favorably received; \u2022 users feel that their experience is diminished as a result of the decisions we make with respect to the frequency, prominence, format, size, and quality of ads that we display; \u2022 users have difficulty installing, updating, or otherwise accessing our products on mobile devices as a result of actions by us or third parties that we rely on to distribute our products and deliver our services; \u2022 user behavior on any of our products changes, including decreases in the quality and frequency of content shared on our products and services; \u2022 we are unable to continue to develop products for mobile devices that users find engaging, that work with a variety of mobile operating systems and networks, and that achieve a high level of market acceptance; \u2022 there are decreases in user sentiment about the quality or usefulness of our products or concerns related to privacy and sharing, safety, security, or other factors; \u2022 we are unable to manage and prioritize information to ensure users are presented with content that is appropriate, interesting, useful, and relevant to them; \u2022 we are unable to obtain or attract engaging third-party content; \u2022 users adopt new technologies where our products may be displaced in favor of other products or services, or may not be featured or otherwise available; \u2022 there are adverse changes in our products that are mandated by legislation, regulatory authorities, or litigation; \u2022 there is decreased engagement or acceptance of product features on our service, or decreased acceptance of our terms of service, as part of changes that may be implemented in connection with the General Data Protection Regulation (GDPR) in Europe; \u2022 technical or other problems prevent us from delivering our products in a rapid and reliable manner or otherwise affect the user experience, such as security breaches or failure to prevent or limit spam or similar content; \u2022 we adopt terms, policies, or procedures related to areas such as sharing, content, user data, or advertising that are perceived negatively by our users or the general public; \u2022 we elect to focus our product decisions on longer-term initiatives that do not prioritize near-term user growth and engagement, or if initiatives designed to attract and retain users and engagement are unsuccessful or discontinued, whether as a result of actions by us, third parties, or otherwise; \u2022 we fail to provide adequate customer service to users, marketers, developers, or other partners; \u2022 we, developers whose products are integrated with our products, or other partners and companies in our industry are the subject of adverse media reports or other negative publicity; or \u2022 our current or future products, such as our development tools and application programming interfaces that enable developers to build, grow, and monetize mobile and web applications, reduce user activity on our products by making it easier for our users to interact and share on third-party mobile and web applications.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001326801_10-K_2017_section_1A_16"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "Item 1A",
+      "Risk Factors"
+    ],
+    "notes": "Auto-generated risk QA from topic=regulatory, risk_cue_count=7.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.5
+  },
+  {
+    "question_id": "5f9877f7-9464-4886-a956-4e9f0d40c112",
+    "cik_int": [
+      890926
+    ],
+    "company_name": [
+      "RADIAN GROUP INC"
+    ],
+    "years": [
+      2020
+    ],
+    "question_text": "What major risks does RADIAN GROUP INC highlight in its Risk Factors?",
+    "answer_type": "span",
+    "answer_text": "Item 1A Risk Factors Risks Related to the COVID-19 Pandemic The COVID-19 pandemic has adversely impacted us, and its ultimate impact on our business and financial results will depend on future developments, which are highly uncertain and cannot be predicted, including the scope, severity and duration of the pandemic and actions taken by governmental authorities in response to the pandemic.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000890926_10-K_2020_section_1A_0"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "Item 1A",
+      "Risk Factors"
+    ],
+    "notes": "Auto-generated risk QA from topic=general_risk, risk_cue_count=6.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.5
+  },
+  {
+    "question_id": "bd4b954a-b16a-4674-929c-fb1b1673663f",
+    "cik_int": [
+      1018724
+    ],
+    "company_name": [
+      "AMAZON COM INC"
+    ],
+    "years": [
+      2020
+    ],
+    "question_text": "What key regulatory risks does AMAZON COM INC highlight in its Risk Factors?",
+    "answer_type": "span",
+    "answer_text": "Because we collect, process, store, and transmit large amounts of data, including confidential, sensitive, proprietary, and business and personal information, failure to prevent or mitigate data loss, theft, misuse, or other security breaches or vulnerabilities affecting our or our vendors' or customers' technology, products, and systems, could: expose us or our customers to a risk of loss, disclosure, or misuse of such information; adversely affect our operating results; result in litigation, liability, or regulatory action (including under laws related to privacy, data protection, data security, network security, and consumer protection); deter customers or sellers from using our stores and services; and otherwise harm our business and reputation.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001018724_10-K_2020_section_1A_130"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "Item 1A",
+      "Risk Factors"
+    ],
+    "notes": "Auto-generated risk QA from topic=regulatory, risk_cue_count=6.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.5
+  },
+  {
+    "question_id": "a656a0e8-5eb8-4a80-a576-be0cc22bcdd4",
+    "cik_int": [
+      1065280
+    ],
+    "company_name": [
+      "NETFLIX INC"
+    ],
+    "years": [
+      2016
+    ],
+    "question_text": "What key regulatory risks does NETFLIX INC highlight in its Risk Factors?",
+    "answer_type": "span",
+    "answer_text": "In addition to the risks that we face in the U.S., our international operations involve risks that could adversely affect our business, including: \u2022 the need to adapt our content and user interfaces for specific cultural and language differences, including licensing a certain portion of our content assets before we have developed a full appreciation for its performance within a given territory; \u2022 difficulties and costs associated with staffing and managing foreign operations; \u2022 management distraction; \u2022 political or social unrest and economic instability; \u2022 compliance with U.S. laws such as the Foreign Corrupt Practices Act, export controls and economic sanctions, and local laws prohibiting corrupt payments to government officials; \u2022 difficulties in understanding and complying with local laws, regulations and customs in foreign jurisdictions; \u2022 regulatory requirements or government action against our service, whether in response to enforcement of actual or purported legal and regulatory requirements or otherwise, that results in disruption or non-availability of our service or particular content in the applicable jurisdiction; \u2022 less favorable foreign intellectual property laws; \u2022 adverse domestic or international tax consequences such as those related to repatriation of cash from foreign jurisdictions into the United States, non-income related taxes such as value-added tax or other indirect taxes, changes in tax laws or tax rates or their interpretations and the related application of judgment in determining our global provision for income taxes, deferred tax assets or liabilities or other tax liabilities given the ultimate tax determination is uncertain; \u2022 fluctuations in currency exchange rates, which we do not use foreign exchange contracts or derivatives to hedge against and which could impact revenues and expenses of our international operations and expose us to foreign currency exchange rate risk; \u2022 profit repatriation and other restrictions on the transfer of funds; \u2022 differing payment processing systems as well as consumer use and acceptance of electronic payment methods, such as payment cards; \u2022 new and different sources of competition; \u2022 censorship requirements that cause us to remove or edit popular content, leading to consumer disappointment or dissatisfaction with our service; \u2022 low usage and/or penetration of internet-connected consumer electronic devices; \u2022 different and more stringent user protection, data protection, privacy and other laws; \u2022 availability of reliable broadband connectivity and wide area networks in targeted areas for expansion; \u2022 integration and operational challenges as well as potential unknown liabilities in connection with companies we may acquire or control; and \u2022 differing, and often more lenient, laws and consumer understanding/attitudes regarding the illegality of piracy.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001065280_10-K_2016_section_1A_47"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "medium",
+    "section_hints": [
+      "Item 1A",
+      "Risk Factors"
+    ],
+    "notes": "Auto-generated risk QA from topic=regulatory, risk_cue_count=6.",
+    "gold_version": "P3.v1",
+    "created_by": "auto_seed_v1",
+    "created_at": "2025-11-13T09:01:09.226543Z",
+    "curation_confidence": 0.5
+  }
+]

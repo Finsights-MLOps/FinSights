@@ -1,0 +1,368 @@
+[
+  {
+    "question_id": "P3V3-Q001",
+    "cik_int": [
+      104169
+    ],
+    "company_name": [
+      "Walmart Inc."
+    ],
+    "years": [
+      2018,
+      2019,
+      2020
+    ],
+    "question_text": "Across its fiscal 2018-2020 10-K filings, how does Walmart Inc. explain the main drivers behind changes in its long-term debt and related cash flows from financing activities?",
+    "answer_type": "span",
+    "answer_text": "Walmart links changes in long-term debt over this period to deliberate capital structure actions. In 2018 it highlights losses and cash outflows from the early extinguishment of higher-rate debt, which were intended to reduce future interest expense. In 2019 and 2020 it explains that large new issuances and subsequent movements in long-term debt were primarily driven by financing the Flipkart acquisition and funding broader corporate and operating needs, with short-term borrowings and repayments shifting as those long-term debt transactions settled.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000104169_10-K_2018_section_7_142",
+      "0000104169_10-K_2018_section_7_224",
+      "0000104169_10-K_2019_section_7_209",
+      "0000104169_10-K_2020_section_7_219"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_year",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "Cross-year KPI trend question focusing on long-term debt, debt extinguishment and Flipkart-related funding.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.616918Z",
+    "curation_confidence": 0.83
+  },
+  {
+    "question_id": "P3V3-Q002",
+    "cik_int": [
+      1326801
+    ],
+    "company_name": [
+      "Meta Platforms, Inc."
+    ],
+    "years": [
+      2019,
+      2022,
+      2024
+    ],
+    "question_text": "Over time, how does Meta Platforms describe the regulatory and policy risks that could affect its advertising business and use of data, including anti-corruption laws, privacy rules and emerging AI frameworks?",
+    "answer_type": "span",
+    "answer_text": "Meta warns that its advertising revenue and targeting capabilities are exposed to multiple layers of regulation. In its 2019 filings it notes that advertising revenue can be constrained by laws or policies that limit which marketers it can work with or where ads can run, and it explicitly flags ongoing compliance obligations under the U.S. Foreign Corrupt Practices Act and similar anti-corruption regimes. In later filings, including 2022, the company stresses that privacy and data-use rules can directly restrict its ability to use data for advertising purposes. By 2024 it adds that rapidly evolving AI-focused legal frameworks, such as the EU AI Act, create further uncertainty and potential compliance costs that could affect how its AI-driven ad systems operate.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001326801_10-K_2019_section_1A_30",
+      "0001326801_10-K_2019_section_1A_473",
+      "0001326801_10-K_2022_section_1A_92",
+      "0001326801_10-K_2024_section_1A_154"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_year",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Narrative risk-factor trend question spanning ad regulation, anti-corruption, privacy/data-use limits and AI regulation.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617006Z",
+    "curation_confidence": 0.82
+  },
+  {
+    "question_id": "P3V3-Q003",
+    "cik_int": [
+      200406
+    ],
+    "company_name": [
+      "JOHNSON & JOHNSON"
+    ],
+    "years": [
+      2022,
+      2023,
+      2024
+    ],
+    "question_text": "Between 2022 and 2024, how does Johnson & Johnson describe the impact of COVID-19 on selected consumer and infectious disease product sales in its 10-K MD&A discussions?",
+    "answer_type": "span",
+    "answer_text": "Johnson & Johnson initially portrays COVID-19 as a tailwind and then a headwind for different parts of the portfolio. In 2022 it notes that certain consumer franchises benefited from innovation, e-commerce strength and COVID-19 recovery. By 2023 it reports operational declines in some personal care categories, citing negative COVID-19 impacts in China and broader pressure on consumption. In its 2024 MD&A the company explains that infectious disease product sales fell versus the prior year primarily because COVID-19 vaccine revenue declined, making pandemic-related demand a key driver of the trend.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000200406_10-K_2022_section_7_54",
+      "0000200406_10-K_2023_section_7_54",
+      "0000200406_10-K_2024_section_7_61"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_year",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "Cross-year narrative question tying COVID-19 conditions to J&J category and infectious disease sales trends.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617091Z",
+    "curation_confidence": 0.84
+  },
+  {
+    "question_id": "P3V3-Q004",
+    "cik_int": [
+      890926,
+      1065280,
+      1141391
+    ],
+    "company_name": [
+      "RADIAN GROUP INC",
+      "NETFLIX INC",
+      "Mastercard Inc"
+    ],
+    "years": [
+      2009
+    ],
+    "question_text": "In their 2009 Form 10-K risk-factor disclosures, how do Radian Group, Netflix and Mastercard each describe their exposure to data protection, information security and customer privacy risks?",
+    "answer_type": "list",
+    "answer_text": [
+      "Radian Group warns that, despite believing it has appropriate information security, failures or breaches by employees or third parties could still occur and adversely affect the business.",
+      "Netflix emphasizes that privacy concerns and potential compromises of subscriber data could limit its ability to grow, damage its reputation and negatively affect its business.",
+      "Mastercard explicitly flags data protection and information security as a distinct risk area, underscoring the importance of safeguarding transaction and cardholder data in its network."
+    ],
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000890926_10-K_2009_section_1A_410",
+      "0001065280_10-K_2009_section_1A_235",
+      "0001141391_10-K_2009_section_1A_119"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_company",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Cross-company comparison of 2009 cyber/privacy risk language across insurers, streaming and payments.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617166Z",
+    "curation_confidence": 0.85
+  },
+  {
+    "question_id": "P3V3-Q005",
+    "cik_int": [
+      104169,
+      320193,
+      789019,
+      813762
+    ],
+    "company_name": [
+      "Walmart Inc.",
+      "Apple Inc.",
+      "MICROSOFT CORP",
+      "ICAHN ENTERPRISES L.P."
+    ],
+    "years": [
+      2010
+    ],
+    "question_text": "For 2010, how do Walmart, Apple, Microsoft and Icahn Enterprises describe their exposure to liquidity and credit-related risks in their Item 1A risk-factor discussions?",
+    "answer_type": "list",
+    "answer_text": [
+      "Walmart notes that certain legal proceedings and contingencies could adversely affect its results of operations, financial condition and liquidity.",
+      "Apple explains that the credit quality, ratings and pricing of its investment portfolio expose it to potential deterioration or losses that could impact financial results.",
+      "Microsoft highlights that tax and regulatory developments can have a material adverse impact on its tax expense and cash flows.",
+      "Icahn Enterprises warns that difficult market conditions for highly leveraged investments and defaults by counterparties or institutions could significantly affect funds it manages and, in turn, its own liquidity and results."
+    ],
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000104169_10-K_2010_section_1A_78",
+      "0000320193_10-K_2010_section_1A_204",
+      "0000789019_10-K_2010_section_1A_145",
+      "0000813762_10-K_2010_section_1A_155"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_company",
+    "difficulty": "hard",
+    "section_hints": [
+      "ITEM_1A"
+    ],
+    "notes": "Cross-company liquidity/credit risk framing across retail, hardware, software and investment partnership.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617235Z",
+    "curation_confidence": 0.81
+  },
+  {
+    "question_id": "P3V3-Q006",
+    "cik_int": [
+      34088,
+      59478
+    ],
+    "company_name": [
+      "EXXON MOBIL CORP",
+      "ELI LILLY & Co"
+    ],
+    "years": [
+      2023
+    ],
+    "question_text": "In their 2023 Form 10-K filings, what revenue-related themes do Exxon Mobil and Eli Lilly highlight around technology licensing and U.S. drug programs that affect revenue?",
+    "answer_type": "list",
+    "answer_text": [
+      "Exxon Mobil reports that revenues from technology licensed to third parties totaled around $155 million in 2023, underscoring a recurring but relatively small licensing revenue stream.",
+      "Eli Lilly explains that U.S. government pricing and discount mechanisms such as the 340B drug pricing program and similar schemes are expanding and are increasingly impacting the revenue it earns on a growing percentage of sales."
+    ],
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000034088_10-K_2023_section_1_18",
+      "0000059478_10-K_2023_section_1_226"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_company",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_1"
+    ],
+    "notes": "KPI-adjacent, narrative revenue question contrasting technology licensing with 340B-driven revenue headwinds.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617298Z",
+    "curation_confidence": 0.83
+  },
+  {
+    "question_id": "P3V3-Q007",
+    "cik_int": [
+      1318605
+    ],
+    "company_name": [
+      "Tesla, Inc."
+    ],
+    "years": [
+      2022
+    ],
+    "question_text": "Where does Tesla define Adjusted EBITDA in its 2022 Form 10-K, and how does the company describe that metric?",
+    "answer_type": "span",
+    "answer_text": "In the notes accompanying its non-GAAP metrics, Tesla states that Adjusted EBITDA is defined as net income or loss attributable to common stockholders adjusted to remove the effects of interest expense, income taxes, depreciation and amortization and stock-based compensation. The definition frames Adjusted EBITDA as a measure of operating performance that excludes these financing, tax and non-cash expense items.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001318605_10-K_2022_section_8_592"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_8"
+    ],
+    "notes": "Classic non-GAAP definition grounding question for Adjusted EBITDA.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617356Z",
+    "curation_confidence": 0.9
+  },
+  {
+    "question_id": "P3V3-Q008",
+    "cik_int": [
+      813762
+    ],
+    "company_name": [
+      "ICAHN ENTERPRISES L.P."
+    ],
+    "years": [
+      2011
+    ],
+    "question_text": "How does Icahn Enterprises define Adjusted EBITDA in its 2011 Form 10-K, and what types of items does it exclude?",
+    "answer_type": "span",
+    "answer_text": "Icahn Enterprises explains that it defines Adjusted EBITDA as EBITDA excluding the impact of certain items it does not consider indicative of ongoing operations, including results from discontinued operations and gains or losses on the extinguishment of debt. The definition is intended to isolate recurring operating performance by backing out these non-core or non-recurring items.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000813762_10-K_2011_section_6_9"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_6"
+    ],
+    "notes": "Definition grounding for Adjusted EBITDA with explicit mention of excluded items such as discontinued operations and debt extinguishment gains/losses.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617414Z",
+    "curation_confidence": 0.88
+  },
+  {
+    "question_id": "P3V3-Q009",
+    "cik_int": [
+      200406
+    ],
+    "company_name": [
+      "JOHNSON & JOHNSON"
+    ],
+    "years": [
+      2024
+    ],
+    "question_text": "Does Johnson & Johnson explicitly attribute the decline in 2024 infectious disease product sales to lower COVID-19 vaccine revenue, and how is that described?",
+    "answer_type": "boolean",
+    "answer_text": "Yes. In its 2024 MD&A, Johnson & Johnson states that infectious disease product sales declined compared with the prior year and explains that this decrease was primarily driven by a decline in COVID-19 vaccine revenue.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0000200406_10-K_2024_section_7_61"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "local",
+    "difficulty": "easy",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "Verification-style question checking explicit attribution of sales decline to COVID-19 vaccine revenue.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617469Z",
+    "curation_confidence": 0.92
+  },
+  {
+    "question_id": "P3V3-Q010",
+    "cik_int": [
+      1326801
+    ],
+    "company_name": [
+      "Meta Platforms, Inc."
+    ],
+    "years": [
+      2015,
+      2016
+    ],
+    "question_text": "In its 2015 and 2016 Form 10-K filings, does Meta explicitly attribute movements in 'Other income/(expense), net' to foreign currency remeasurement, and what does it say?",
+    "answer_type": "boolean",
+    "answer_text": "Yes. Meta explains that changes in 'Other income/(expense), net' in both 2015 and 2016 were driven primarily by the periodic remeasurement of its foreign currency balances. One year it notes an increase and in the other a decrease, but in each case it points to foreign currency remeasurement as the main cause.",
+    "answer_numeric": null,
+    "answer_unit": null,
+    "tolerance": null,
+    "evidence_sentence_ids": [
+      "0001326801_10-K_2016_section_7_216",
+      "0001326801_10-K_2015_section_7_249"
+    ],
+    "evidence_spans": [],
+    "retrieval_scope": "cross_year",
+    "difficulty": "medium",
+    "section_hints": [
+      "ITEM_7"
+    ],
+    "notes": "Verification question focused on FX-driven movements in other income/(expense) across consecutive years.",
+    "gold_version": "P3.v3",
+    "created_by": "gpt5_agent",
+    "created_at": "2025-11-14T03:15:26.617526Z",
+    "curation_confidence": 0.87
+  }
+]
